@@ -1,71 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Admin Dashboard</title>
-    <link rel="stylesheet" href="./Admin.css" />
-    <link
-      rel="icon"
-      type="image/png"
-      href="https://icons.iconarchive.com/icons/jozef89/services-flat/512/ecommerce-icon.png"
-    />
-  </head>
-  <body>
-    <header class="navbar">
-      <div class="navbar-left">
-        <img
-          src="https://icons.iconarchive.com/icons/jozef89/services-flat/512/ecommerce-icon.png"
-          alt="Logo"
-          class="logo"
-        />
-        <span class="logo-text">Ecommerce Admin</span>
-      </div>
-      <div class="navbar-right">
-        <span id="adminName">Welcome, Admin</span>
-        <button id="signOutBtn" class="signout-button">Sign Out</button>
-      </div>
-    </header>
 
-    <main class="dashboard-container">
-      <div class="dashboard-card">
-        <h2>📦 View All Orders</h2>
-        <p>Monitor and manage all customer orders.</p>
-        <a href="orders.html" class="dashboard-btn">Go to Orders</a>
-      </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="./Admin.css" />
+  <link rel="icon" type="image/png"
+    href="https://icons.iconarchive.com/icons/jozef89/services-flat/512/ecommerce-icon.png" />
+</head>
 
-      <div class="dashboard-card">
-        <h2>👤 Manage Users</h2>
-        <p>View and edit seller and customer accounts.</p>
-        <a href="users.html" class="dashboard-btn">Go to Users</a>
-      </div>
+<body>
+  <header class="navbar">
+    <div class="navbar-left">
+      <img src="https://icons.iconarchive.com/icons/jozef89/services-flat/512/ecommerce-icon.png" alt="Logo"
+        class="logo" />
+      <span class="logo-text">Ecommerce Admin</span>
+    </div>
+    <div class="navbar-right">
+      <span id="adminName">Welcome, Admin</span>
+      <button id="signOutBtn" class="signout-button">Sign Out</button>
+    </div>
+  </header>
 
-      <div class="dashboard-card">
-        <h2>🛍️ View New Products</h2>
-        <p>Check and approve newly added products.</p>
-        <a href="new-products.html" class="dashboard-btn">Go to Products</a>
-      </div>
-    </main>
-    <script src="/SignOut_Logic/SignOut.js"></script>
+  <main class="dashboard-container">
+    <div class="dashboard-card">
+      <h2>📦 View All Orders</h2>
+      <p>Monitor and manage all customer orders.</p>
+      <a href="orders.html" class="dashboard-btn">Go to Orders</a>
+    </div>
 
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        // تأكد من أن البيانات موجودة في localStorage
-        const sellerData = JSON.parse(localStorage.getItem("loggedInUser"));
+    <div class="dashboard-card">
+      <h2>👤 Manage Users</h2>
+      <p>View and edit seller and customer accounts.</p>
+      <a href="users.html" class="dashboard-btn">Go to Users</a>
+    </div>
 
-        // تحقق إذا كانت البيانات موجودة
-        if (sellerData && sellerData.FullName) {
-          // تحديث النص داخل العنصر
-          const sellerNameElement = document.getElementById("adminName");
-          if (sellerNameElement) {
-            sellerNameElement.textContent = `Welcome, ${sellerData.FullName}`;
-          } else {
-            console.error('Element with id "sellerName" not found');
-          }
+    <div class="dashboard-card">
+      <h2>🛍️ View New Products</h2>
+      <p>Check and approve newly added products.</p>
+      <a href="new-products.html" class="dashboard-btn">Go to Products</a>
+    </div>
+    <div class="dashboard-card">
+      <h2>🛍️ Product Management</h2>
+      <p>Edit / Delete existing products</p>
+      <a href="edit.delete.html" class="dashboard-btn">Go to Products</a>
+    </div>
+  </main>
+  <script src="/SignOut_Logic/SignOut.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // تأكد من أن البيانات موجودة في localStorage
+      const sellerData = JSON.parse(localStorage.getItem("loggedInUser"));
+
+      // تحقق إذا كانت البيانات موجودة
+      if (sellerData && sellerData.FullName) {
+        // تحديث النص داخل العنصر
+        const sellerNameElement = document.getElementById("adminName");
+        if (sellerNameElement) {
+          sellerNameElement.textContent = `Welcome, ${sellerData.FullName}`;
         } else {
-          console.error("No seller data found in localStorage");
+          console.error('Element with id "sellerName" not found');
         }
-      });
-    </script>
-  </body>
+      } else {
+        console.error("No seller data found in localStorage");
+      }
+    });
+  </script>
+</body>
+
 </html>
