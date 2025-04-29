@@ -11,9 +11,9 @@
     },
     {
       "id": "70bd5f9b-81fb-4356-8303-d8091d7c40fc",
-      "FullName": "Mariem",
-      "UserName": "Mar1234",
-      "Email": "mariem@gmail.com",
+      "FullName": "Mostafa",
+      "UserName": "Mos1234",
+      "Email": "MostafaAhmed@gmail.com",
       "Password": "12345678",
       "Phone": "01069423530",
       "Address": "9 - sayed zaidan st",
@@ -80,21 +80,12 @@
       "SellerId": "70bd5f9b-81fb-4356-8303-d8091d7c40fc"
     },
     {
-      "id": "d0e919ba-1bf7-4cb6-9a06-4c04b2ee6663",
-      "image": "https://burst.shopifycdn.com/photos/wrist-watches.jpg?width=1000&format=pjpg&exif=0&iptc=0",
-      "name": "Watches",
-      "price": "42141",
-      "description": "RQRQRW",
-      "isPending": true,
-      "SellerId": "70bd5f9b-81fb-4356-8303-d8091d7c40fc"
-    },
-    {
       "id": "5c77b103-7b34-4601-9c75-7fb48e0fe74d",
       "image": "https://plus.unsplash.com/premium_photo-1679913792906-13ccc5c84d44?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cHJvZHVjdHxlbnwwfHwwfHx8MA%3D%3D",
       "name": "Headphone",
       "price": "2141241",
       "description": "QFAFASF",
-      "isPending": true,
+      "isPending": false,
       "SellerId": "70bd5f9b-81fb-4356-8303-d8091d7c40fc"
     }
   ]
