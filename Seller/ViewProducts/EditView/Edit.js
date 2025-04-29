@@ -25,28 +25,52 @@ window.addEventListener("load", function () {
 });
 
 ConfirmBtn.addEventListener("click", function () {
-  // تحديث (PUT)
-  const newName = prompt("Edit name:", Name.value); // هنا بنعرض الاسم الحالي في الـ prompt
-  if (newName) {
-    // تأكد أن المستخدم مش سايب الحقل فاضي
-    fetch(`http://localhost:5000/Products?id=${id}`, {
+  const newName = Name.value.trim();
+  const newPrice = Price.value.trim();
+  const newDescription = Description.value.trim();
+  const newImage = Image.value.trim();
+
+  // التأكد من تغيير البيانات
+  if (
+    newName !== "" &&
+    newName !== Name.defaultValue &&
+    newPrice !== "" &&
+    newPrice !== Price.defaultValue &&
+    newDescription !== "" &&
+    newDescription !== Description.defaultValue &&
+    newImage !== "" &&
+    newImage !== Image.defaultValue
+  ) {
+    fetch(`http://localhost:5000/Products/${id}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        image: Image.value,
-        name: newName, // استخدمنا newName هنا عشان هو اللي المستخدم دخل قيمته
-        price: Price.value,
-        description: Description.value,
+        image: newImage,
+        name: newName,
+        price: newPrice,
+        description: newDescription,
       }),
     })
-      .then(() => {
-        // إعادة تحميل البيانات أو إعادة التوجيه حسب الحاجة
-        alert("Product updated successfully.");
-        // LoadFunc();  // لو عايز تعيد تحميل البيانات بعد التحديث
+      .then((response) => {
+        if (response.ok) {
+          swal({
+            title: "Done!",
+            text: "Updated Succesfully",
+            icon: "warning", // "success", "error", "info", "warning"
+            button: "OK",
+          });
+        } else {
+          response.text().then((text) => {
+            console.error("Error response:", text); // فحص محتوى الخطأ
+            alert("Failed to update product.");
+          });
+        }
       })
       .catch((err) => {
-        console.error("Error updating product:", err);
+        console.error("Error updating product:", err); // التأكد من أي خطأ في الاتصال
         alert("Failed to update product.");
       });
+  } else {
+    alert("No changes were made.");
   }
 });
