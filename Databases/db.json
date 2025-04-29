@@ -11,9 +11,9 @@
     },
     {
       "id": "70bd5f9b-81fb-4356-8303-d8091d7c40fc",
-      "FullName": "Mostafa",
-      "UserName": "Mos1234",
-      "Email": "MostafaAhmed@gmail.com",
+      "FullName": "Mariem",
+      "UserName": "Mariem",
+      "Email": "mariem@gmail.com",
       "Password": "12345678",
       "Phone": "01069423530",
       "Address": "9 - sayed zaidan st",
@@ -67,7 +67,7 @@
       "name": "Headphone",
       "price": "2141",
       "description": "Great and Ideal Headphone",
-      "isPending": true,
+      "isPending": false,
       "SellerId": "70bd5f9b-81fb-4356-8303-d8091d7c40fc"
     },
     {
@@ -77,15 +77,6 @@
       "price": "23414",
       "description": "FASFAFA",
       "isPending": true,
-      "SellerId": "70bd5f9b-81fb-4356-8303-d8091d7c40fc"
-    },
-    {
-      "id": "5c77b103-7b34-4601-9c75-7fb48e0fe74d",
-      "image": "https://plus.unsplash.com/premium_photo-1679913792906-13ccc5c84d44?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cHJvZHVjdHxlbnwwfHwwfHx8MA%3D%3D",
-      "name": "Headphone",
-      "price": "2141241",
-      "description": "QFAFASF",
-      "isPending": false,
       "SellerId": "70bd5f9b-81fb-4356-8303-d8091d7c40fc"
     }
   ]
