@@ -1,0 +1,101 @@
+{
+  "Users": [
+    {
+      "Email": "a.elkholy2711@gmail.com",
+      "Password": "12345678",
+      "FullName": "Ahmed ElKholy",
+      "UserName": "Admin",
+      "Phone": "01069423530",
+      "Address": "No Address",
+      "Type": "Admin"
+    },
+    {
+      "id": "70bd5f9b-81fb-4356-8303-d8091d7c40fc",
+      "FullName": "Mariem",
+      "UserName": "Mar1234",
+      "Email": "mariem@gmail.com",
+      "Password": "12345678",
+      "Phone": "01069423530",
+      "Address": "9 - sayed zaidan st",
+      "Type": "Seller"
+    },
+    {
+      "id": "5a279954-c9c4-403c-9405-8f8c64f6dcfd",
+      "FullName": "Ahmed",
+      "UserName": "a.elkholy2711afafas@gmail.com",
+      "Email": "a.e23lkholy2711@gmail.com",
+      "Password": "12345678",
+      "Phone": "01069423530",
+      "Address": "9 - sayed zaidan st",
+      "Type": "Customer"
+    },
+    {
+      "id": "2716b5c1-5386-4bc5-92a8-b26d7f5b7ed9",
+      "FullName": "afafsafa",
+      "UserName": "a.elkholy2711@gmail.com",
+      "Email": "sa@hg.com",
+      "Password": "12345678",
+      "Phone": "بشبشبش",
+      "Address": "afasf",
+      "Type": "Seller"
+    },
+    {
+      "id": "b0874b21-ada2-4da4-ae3d-6c06c29ed04d",
+      "FullName": "Ahmed ElKholy",
+      "UserName": "EQQFAFAAC",
+      "Email": "a.ADADADAADADA@gmail.com",
+      "Password": "12345678",
+      "Phone": "01069423530",
+      "Address": "9 - sayed zaidan st",
+      "Type": "Seller"
+    },
+    {
+      "id": "32414e4b-f119-4201-ac43-748a141726bb",
+      "FullName": "Seller2",
+      "UserName": "fafwefsf",
+      "Email": "midoarz2000rqefre@gmail.com",
+      "Password": "12345678",
+      "Phone": "01069423530",
+      "Address": "9 - sayed zaidan st",
+      "Type": "Seller"
+    }
+  ],
+  "Products": [
+    {
+      "id": "51692d1e-9b53-49ff-9d51-fc578db4b6cb",
+      "image": "https://plus.unsplash.com/premium_photo-1679913792906-13ccc5c84d44?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cHJvZHVjdHxlbnwwfHwwfHx8MA%3D%3D",
+      "name": "Headphone",
+      "price": "2141",
+      "description": "Great and Ideal Headphone",
+      "isPending": true,
+      "SellerId": "70bd5f9b-81fb-4356-8303-d8091d7c40fc"
+    },
+    {
+      "id": "b55cc9f3-f29d-4bca-b857-ac6f2c0b17eb",
+      "image": "https://plus.unsplash.com/premium_photo-1679913792906-13ccc5c84d44?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cHJvZHVjdHxlbnwwfHwwfHx8MA%3D%3D",
+      "name": "Watches",
+      "price": "23414",
+      "description": "FASFAFA",
+      "isPending": true,
+      "SellerId": "70bd5f9b-81fb-4356-8303-d8091d7c40fc"
+    },
+    {
+      "id": "d0e919ba-1bf7-4cb6-9a06-4c04b2ee6663",
+      "image": "https://burst.shopifycdn.com/photos/wrist-watches.jpg?width=1000&format=pjpg&exif=0&iptc=0",
+      "name": "Watches",
+      "price": "42141",
+      "description": "RQRQRW",
+      "isPending": true,
+      "SellerId": "70bd5f9b-81fb-4356-8303-d8091d7c40fc"
+    },
+    {
+      "id": "5c77b103-7b34-4601-9c75-7fb48e0fe74d",
+      "image": "https://plus.unsplash.com/premium_photo-1679913792906-13ccc5c84d44?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cHJvZHVjdHxlbnwwfHwwfHx8MA%3D%3D",
+      "name": "Headphone",
+      "price": "2141241",
+      "description": "QFAFASF",
+      "isPending": true,
+      "SellerId": "70bd5f9b-81fb-4356-8303-d8091d7c40fc"
+    }
+  ]
+}

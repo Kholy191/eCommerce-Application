@@ -1,0 +1,134 @@
+/* style.css */
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+/* Navbar Styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 15px 30px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.logo-text {
+  font-size: 22px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #007bff;
+}
+
+.search-bar {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  margin: 10px 20px;
+}
+
+.search-bar input {
+  width: 100%;
+  max-width: 400px;
+  padding: 8px 15px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+/* Auth Buttons */
+.auth-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.auth-buttons button {
+  padding: 8px 16px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.auth-buttons button:hover {
+  background-color: #0056b3;
+}
+
+/* Footer Styling */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #fff;
+  margin-top: 50px;
+  font-size: 14px;
+  color: #777;
+  border-top: 1px solid #ddd;
+}
+
+/* Add to Cart Button */
+.add-to-cart-btn {
+  background-color: #007bff; /* اللون الأزرق الأساسي */
+  color: white; /* اللون الأبيض للنص */
+  border: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+  width: 100%; /* تأكد من أن الزر بياخد عرض كامل للمنتج */
+  display: block; /* عشان الزر يظهر تحت الصورة بشكل صحيح */
+}
+
+/* تأثير hover عند التمرير */
+.add-to-cart-btn:hover {
+  background-color: #0056b3; /* اللون الأزرق الداكن */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .search-bar {
+    width: 100%;
+    margin: 15px 0;
+  }
+
+  .auth-buttons {
+    align-self: flex-end;
+  }
+}

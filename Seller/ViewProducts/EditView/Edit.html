@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Edit Product</title>
+    <link rel="stylesheet" href="./Edit.css" />
+  </head>
+  <body>
+    <div class="edit-container">
+      <h2>Edit Product</h2>
+      <div class="form-group">
+        <label for="productName">Name</label>
+        <input type="text" id="productName" />
+      </div>
+      <div class="form-group">
+        <label for="productPrice">Price (EGP)</label>
+        <input type="number" id="productPrice" />
+      </div>
+      <div class="form-group">
+        <label for="productDescription">Description</label>
+        <textarea id="productDescription"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="productImage">Image URL</label>
+        <input type="text" id="productImage" />
+      </div>
+      <div class="button-group">
+        <button class="cancel-btn" onclick="window.history.back()">
+          Cancel
+        </button>
+        <button class="confirm-btn" id="ConfirmBtn">Confirm</button>
+      </div>
+    </div>
+
+    <script src="./Edit.js"></script>
+  </body>
+</html>

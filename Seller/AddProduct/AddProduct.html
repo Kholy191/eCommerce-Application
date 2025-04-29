@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add New Product</title>
+    <link rel="stylesheet" href="./AddProduct.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://icons.iconarchive.com/icons/jozef89/services-flat/512/ecommerce-icon.png"
+    />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="navbar-left">
+        <img
+          src="https://icons.iconarchive.com/icons/jozef89/services-flat/512/ecommerce-icon.png"
+          alt="Logo"
+          class="logo"
+        />
+        <span class="logo-text">Add New Product</span>
+      </div>
+      <div class="navbar-right">
+        <button
+          onclick="window.location.href='../Seller.html'"
+          class="back-button"
+        >
+          ⬅ Back
+        </button>
+      </div>
+    </header>
+
+    <main class="form-container">
+      <form class="product-form" id="PForm">
+        <label>Product Image URL:</label>
+        <input
+          type="url"
+          id="productImage"
+          placeholder="https://..."
+          required
+        />
+
+        <label>Product Name:</label>
+        <input
+          type="text"
+          id="productName"
+          placeholder="Product name"
+          required
+        />
+
+        <label>Price (EGP):</label>
+        <input
+          type="number"
+          id="productPrice"
+          min="0"
+          placeholder="Price in EGP"
+          required
+        />
+
+        <label>Description:</label>
+        <textarea
+          id="productDescription"
+          placeholder="Describe the product..."
+          required
+        ></textarea>
+
+        <button type="submit" class="add-btn">Add Product</button>
+      </form>
+    </main>
+    <script src="./AddProduct.js"></script>
+  </body>
+</html>
