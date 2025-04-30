@@ -7,7 +7,8 @@
       "UserName": "Admin",
       "Phone": "01069423530",
       "Address": "No Address",
-      "Type": "Admin"
+      "Type": "Admin",
+      "id": "fdee"
     },
     {
       "id": "70bd5f9b-81fb-4356-8303-d8091d7c40fc",
@@ -58,15 +59,73 @@
       "Phone": "01069423530",
       "Address": "9 - sayed zaidan st",
       "Type": "Seller"
+    },
+    {
+      "id": "2e63d3ef-3333-4afa-97ab-bb85ea4f8187",
+      "FullName": "Bahaa",
+      "UserName": "BA_Haa",
+      "Email": "Bahaa@gmail.com",
+      "Password": "12345678",
+      "Phone": "01069423530",
+      "Address": "9 - sayed zaidan st",
+      "Type": "Seller"
+    },
+    {
+      "id": "1685a9ed-1ebe-4079-a51d-9a44cbb1ca04",
+      "FullName": "Ahmed",
+      "UserName": "regsgs",
+      "Email": "a.elkholy271afafga1@gmail.com",
+      "Password": "12345678",
+      "Phone": "01069423530",
+      "Address": "9 - sayed zaidan st",
+      "Type": "Seller"
+    },
+    {
+      "id": "9a379e40-1787-49ed-918f-61c63402c53e",
+      "FullName": "rqwrqwr",
+      "UserName": "regsgs",
+      "Email": "afdafafrasfaas@gsaga.com",
+      "Password": "12345678",
+      "Phone": "01069423530",
+      "Address": "9 - sayed zaidan st",
+      "Type": "Customer"
+    },
+    {
+      "id": "f22f81be-8e54-4530-aa80-5e87c306af57",
+      "FullName": "Ahmed",
+      "UserName": "regsgs",
+      "Email": "midoarz200asfasf0@gmail.com",
+      "Password": "12345678",
+      "Phone": "01069423530",
+      "Address": "9 - sayed zaidan st",
+      "Type": "Seller"
     }
   ],
   "Products": [
     {
       "image": "https://plus.unsplash.com/premium_photo-1679913792906-13ccc5c84d44?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cHJvZHVjdHxlbnwwfHwwfHx8MA%3D%3D",
       "name": "Headphone",
-      "price": "333",
-      "description": "a7a",
+      "price": "333414",
+      "description": "Ideal Headphone",
       "id": "8ee65428-9487-4557-9809-a38e3a3c4169"
+    },
+    {
+      "id": "60b1be4e-7646-4e60-a2dd-da3706845f25",
+      "image": "https://plus.unsplash.com/premium_photo-1679913792906-13ccc5c84d44?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cHJvZHVjdHxlbnwwfHwwfHx8MA%3D%3D",
+      "name": "Ahmed",
+      "price": "2341",
+      "description": "A7A",
+      "isPending": true,
+      "SellerId": "70bd5f9b-81fb-4356-8303-d8091d7c40fc"
+    },
+    {
+      "id": "6a5a9fbf-29bf-4169-9f47-96881008a5ea",
+      "image": "https://burst.shopifycdn.com/photos/wrist-watches.jpg?width=1000&format=pjpg&exif=0&iptc=0",
+      "name": "Watches",
+      "price": "24112",
+      "description": "dafafa",
+      "isPending": true,
+      "SellerId": "fdee"
     }
   ]
 }

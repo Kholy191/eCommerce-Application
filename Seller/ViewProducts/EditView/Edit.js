@@ -11,7 +11,6 @@ window.addEventListener("load", function () {
     .then((res) => res.json())
     .then(function (_data) {
       if (_data && _data[0]) {
-        // تأكد من أن البيانات موجودة
         Name.value = _data[0].name;
         Price.value = parseFloat(_data[0].price) || 0;
         Description.value = _data[0].description;
@@ -30,7 +29,6 @@ ConfirmBtn.addEventListener("click", function () {
   const newDescription = Description.value.trim();
   const newImage = Image.value.trim();
 
-  // التأكد من تغيير البيانات
   if (
     newName !== "" &&
     newName !== Name.defaultValue &&
@@ -56,18 +54,18 @@ ConfirmBtn.addEventListener("click", function () {
           swal({
             title: "Done!",
             text: "Updated Succesfully",
-            icon: "warning", // "success", "error", "info", "warning"
+            icon: "warning",
             button: "OK",
           });
         } else {
           response.text().then((text) => {
-            console.error("Error response:", text); // فحص محتوى الخطأ
+            console.error("Error response:", text);
             alert("Failed to update product.");
           });
         }
       })
       .catch((err) => {
-        console.error("Error updating product:", err); // التأكد من أي خطأ في الاتصال
+        console.error("Error updating product:", err);
         alert("Failed to update product.");
       });
   } else {

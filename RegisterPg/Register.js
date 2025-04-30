@@ -58,12 +58,7 @@ form.addEventListener("submit", function (e) {
         })
         .then((data) => {
           e.preventDefault();
-          swal({
-            title: "Done!",
-            text: "Account Created.",
-            icon: "warning", // "success"
-            button: "OK",
-          });
+          window.location.href = "/SignIn/Signin.html";
         })
         .catch((err) => {
           console.error(err);
