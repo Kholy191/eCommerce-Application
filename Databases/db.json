@@ -11,21 +11,21 @@
       "id": "fdee"
     },
     {
+      "Email": "mariem@gmail.com",
+      "Password": "12345678",
       "id": "70bd5f9b-81fb-4356-8303-d8091d7c40fc",
       "FullName": "Mariem",
       "UserName": "Mariem",
-      "Email": "mariem@gmail.com",
-      "Password": "12345678",
       "Phone": "01069423530",
       "Address": "9 - sayed zaidan st",
       "Type": "Seller"
     },
     {
+      "Email": "mostafa@gmail.com",
+      "Password": "12345678",
       "id": "5a279954-c9c4-403c-9405-8f8c64f6dcfd",
       "FullName": "Ahmed",
-      "UserName": "a.elkholy2711afafas@gmail.com",
-      "Email": "a.e23lkholy2711@gmail.com",
-      "Password": "12345678",
+      "UserName": "mostafa",
       "Phone": "01069423530",
       "Address": "9 - sayed zaidan st",
       "Type": "Customer"
@@ -103,15 +103,6 @@
   ],
   "Products": [
     {
-      "id": "60b1be4e-7646-4e60-a2dd-da3706845f25",
-      "image": "https://plus.unsplash.com/premium_photo-1679913792906-13ccc5c84d44?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cHJvZHVjdHxlbnwwfHwwfHx8MA%3D%3D",
-      "name": "Ahmed",
-      "price": "2341",
-      "description": "A7A",
-      "isPending": false,
-      "SellerId": "70bd5f9b-81fb-4356-8303-d8091d7c40fc"
-    },
-    {
       "id": "6a5a9fbf-29bf-4169-9f47-96881008a5ea",
       "image": "https://burst.shopifycdn.com/photos/wrist-watches.jpg?width=1000&format=pjpg&exif=0&iptc=0",
       "name": "Watches",
@@ -128,6 +119,20 @@
       "description": "Great Headphone",
       "isPending": false,
       "SellerId": "70bd5f9b-81fb-4356-8303-d8091d7c40fc"
+    }
+  ],
+  "Cart": [
+    {
+      "id": "7ed5",
+      "CustomerId": "5f77bdcd-9608-437e-82ed-ede8969eb1b2",
+      "ProductId": "6a5a9fbf-29bf-4169-9f47-96881008a5ea",
+      "quantity": 2
+    },
+    {
+      "id": "4716",
+      "CustomerId": "5f77bdcd-9608-437e-82ed-ede8969eb1b2",
+      "ProductId": "926855f4-122c-413e-8c86-e81827766a7a",
+      "quantity": 2
     }
   ]
 }

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ecommerce App</title>
+  <link rel="stylesheet" href="/Styles/index.css" />
+  <link rel="icon" type="image/png"
+    href="https://icons.iconarchive.com/icons/jozef89/services-flat/512/ecommerce-icon.png" />
+  <link rel="stylesheet" href="/Styles/ProductsViewStyle.css" />
+  <link rel="stylesheet" href="./Customer.css">
+  <link rel="stylesheet" href="/Styles/popup.css"> <!-- For styling the popup -->
+
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo-container">
+        <a href="index.html">
+          <img src="https://icons.iconarchive.com/icons/jozef89/services-flat/512/ecommerce-icon.png" alt="Website Icon"
+            class="logo" /></a>
+
+        <a href="index.html" class="logo-text">Ecommerce</a>
+      </div>
+
+      <div class="navbar-right">
+        <span id="CustomerName">Welcome, Customer</span>
+        <button id="signOutBtn" class="signout-button">Sign Out</button>
+        <!-- Profile Button that triggers the popup -->
+        <button id="profileBtn" class="profile-button">Profile Options</button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Search and Filters Section -->
+  <section id="searchAndFilters">
+    <form class="search-bar" id="searchForm">
+      <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search by name..." />
+        <label for="toggleSearchType">
+          <input type="checkbox" id="toggleSearchType" /> Search by Category
+        </label>
+      </div>
+    </form>
+
+    <div class="price-filter">
+      <label for="priceRange">Price range:</label>
+      <input type="range" id="priceRange" min="0" max="1000" step="10" value="1000" />
+      <span id="priceValue">$1000</span>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <main id="Products"></main>
+
+  <footer>
+    <p>© 2025 Ecommerce. All rights reserved.</p>
+  </footer>
+
+  <!-- Popup for Profile Options -->
+  <div id="profilePopup" class="popup">
+    <div class="popup-content">
+      <span id="closePopup" class="close">&times;</span>
+      <h2>Select an Option</h2>
+      <button id="orderHistoryBtn">Order History</button>
+      <button id="updateProfileBtn">Update Profile</button>
+    </div>
+  </div>
+
+  <script src="Customer.js"></script>
+  <script src="/SignOut_Logic/SignOut.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="/General_Logics/CheckUser.js"></script>
+  <script src="/Scripts/main.js"></script>
+  <script src="/Scripts/productSearch.js"></script>
+  <script src="./Search.js"></script>
+  <script src="./ProfilePopup.js"></script> <!-- Add the JavaScript for handling the popup -->
+
+</body>
+
+</html>

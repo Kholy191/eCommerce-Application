@@ -1,0 +1,237 @@
+/* Reset */
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background-color: #f4f9ff;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #007bff;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.logo-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1rem;
+}
+
+/* Dashboard Container */
+.dashboard-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+
+/* Dashboard Cards */
+.dashboard-card {
+  background-color: white;
+  padding: 2rem 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 123, 255, 0.1);
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-5px);
+}
+
+.dashboard-card h2 {
+  margin-top: 0;
+  color: #007bff;
+}
+
+.dashboard-card p {
+  color: #555;
+  font-size: 0.95rem;
+}
+
+/* Button */
+.dashboard-btn {
+  display: inline-block;
+  margin-top: 1.2rem;
+  padding: 0.6rem 1.4rem;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.dashboard-btn:hover {
+  background-color: #0056b3;
+}
+/* Search and Filters Section */
+#searchAndFilters {
+  padding: 20px;
+  background-color: #ffffff;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+/* Search Bar */
+.search-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+/* Search Container (Input + Checkbox) */
+.search-container {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Adjust the gap to reduce space between input and checkbox */
+}
+
+.search-bar input {
+  padding: 0.8rem;
+  width: 250px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: border-color 0.3s ease;
+}
+
+.search-bar input[type="text"]:focus {
+  border-color: #007bff;
+}
+
+.search-container label {
+  font-size: 1rem;
+  color: #555;
+}
+
+.search-bar input[type="checkbox"] {
+  margin-right: 8px;
+  transform: scale(1.1);
+}
+
+/* Price Filter */
+.price-filter {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.price-filter label {
+  font-size: 1rem;
+  color: #555;
+}
+
+.price-filter input {
+  width: 250px;
+}
+
+#priceValue {
+  font-size: 1rem;
+  color: #333;
+  margin-left: 10px;
+}
+
+/* Products Section */
+#Products {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Ensures proper fitting */
+  gap: 1.5rem; /* Controls spacing between cards */
+  padding: 2rem;
+  justify-items: center; /* Ensures grid items are centered horizontally */
+  justify-content: center; /* Centers the grid as a whole horizontally */
+}
+
+/* Product Card Styling */
+.product-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  padding: 15px;
+  width: 100%; /* Takes up full width of the grid item */
+  max-width: 300px; /* Limits card width */
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Ensures content is spaced out within the card */
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+.product-card h3 {
+  font-size: 1.2rem;
+  color: #333;
+  margin: 15px 0;
+}
+
+.product-card p {
+  font-size: 1rem;
+  color: #007bff;
+  margin: 10px 0;
+}
+
+/* Add to Cart Button */
+.add-to-cart-btn {
+  padding: 0.8rem 1.5rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #0056b3;
+}
+
+
+/* Footer */
+footer {
+  background-color: #f8f9fa;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #333;
+}
