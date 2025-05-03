@@ -58,3 +58,14 @@ window.addEventListener("load", function () {
       console.error("Error fetching products:", error);
     });
 });
+
+const footer = document.createElement("footer");
+footer.innerHTML = `
+  <p>
+    © 2025 Ecommerce. All rights reserved. 
+    <a href="#">Privacy Policy</a> |
+    <a href="#">Terms of Service</a>
+  </p>
+`;
+
+document.body.appendChild(footer);
