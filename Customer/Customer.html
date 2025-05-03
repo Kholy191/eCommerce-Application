@@ -28,8 +28,13 @@
       <div class="navbar-right">
         <span id="CustomerName">Welcome, Customer</span>
         <button id="signOutBtn" class="signout-button">Sign Out</button>
-        <!-- Profile Button that triggers the popup -->
-        <button id="profileBtn" class="profile-button">Profile Options</button>
+        <div class="profile-menu">
+          <button id="profileBtn" class="profile-button">Profile Options</button>
+          <div class="profile-dropdown">
+            <a href="./OrderHistory/OrderHistory.html">Order History</a>
+            <a href="./AccountManegment/UpdateProfile.html">Update Profile</a>
+          </div>
+        </div>
       </div>
     </nav>
   </header>
@@ -70,12 +75,12 @@
   </div>
 
   <script src="Customer.js"></script>
+  <script src="options.js"></script>
   <script src="/SignOut_Logic/SignOut.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <script src="/General_Logics/CheckUser.js"></script>
   <script src="/Scripts/main.js"></script>
   <script src="/Scripts/productSearch.js"></script>
-  <script src="./Search.js"></script>
   <script src="./ProfilePopup.js"></script> <!-- Add the JavaScript for handling the popup -->
 
 </body>

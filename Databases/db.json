@@ -21,14 +21,14 @@
       "Type": "Seller"
     },
     {
-      "Email": "mostafa@gmail.com",
-      "Password": "12345678",
-      "id": "5a279954-c9c4-403c-9405-8f8c64f6dcfd",
       "FullName": "Ahmed",
       "UserName": "mostafa",
+      "Email": "mostafaa@gmail.com",
       "Phone": "01069423530",
       "Address": "9 - sayed zaidan st",
-      "Type": "Customer"
+      "Type": "Customer",
+      "Password": "12345678",
+      "id": "5a279954-c9c4-403c-9405-8f8c64f6dcfd"
     },
     {
       "id": "2716b5c1-5386-4bc5-92a8-b26d7f5b7ed9",
@@ -106,244 +106,10 @@
       "id": "6a5a9fbf-29bf-4169-9f47-96881008a5ea",
       "image": "https://burst.shopifycdn.com/photos/wrist-watches.jpg?width=1000&format=pjpg&exif=0&iptc=0",
       "name": "Watches",
-      "price": "24112",
+      "price": "500",
       "description": "dafafa",
       "isPending": false,
       "SellerId": "fdee"
-    },
-    {
-      "id": "f753e125-0cd8-43d0-ae38-b9b9d30a538a",
-      "image": "https://plus.unsplash.com/premium_photo-1679913792906-13ccc5c84d44?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cHJvZHVjdHxlbnwwfHwwfHx8MA%3D%3D",
-      "name": "Headphone",
-      "price": "25200",
-      "description": "jhbkjb",
-      "isPending": false,
-      "SellerId": "70bd5f9b-81fb-4356-8303-d8091d7c40fc"
-    },
-    {
-      "id": "f753e125-0cd8-43d0-ae38-b9b9d30a538a",
-      "image": "https://plus.unsplash.com/premium_photo-1679913792906-13ccc5c84d44?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cHJvZHVjdHxlbnwwfHwwfHx8MA%3D%3D",
-      "name": "Headphone",
-      "price": "25200",
-      "description": "jhbkjb",
-      "isPending": false,
-      "SellerId": "70bd5f9b-81fb-4356-8303-d8091d7c40fc"
-    },
-    {
-      "id": "f753e125-0cd8-43d0-ae38-b9b9d30a538a",
-      "image": "https://plus.unsplash.com/premium_photo-1679913792906-13ccc5c84d44?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cHJvZHVjdHxlbnwwfHwwfHx8MA%3D%3D",
-      "name": "Headphone",
-      "price": "25200",
-      "description": "jhbkjb",
-      "isPending": false,
-      "SellerId": "70bd5f9b-81fb-4356-8303-d8091d7c40fc"
-    },
-    {
-      "id": "f753e125-0cd8-43d0-ae38-b9b9d30a538a",
-      "image": "https://plus.unsplash.com/premium_photo-1679913792906-13ccc5c84d44?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cHJvZHVjdHxlbnwwfHwwfHx8MA%3D%3D",
-      "name": "Headphone",
-      "price": "25200",
-      "description": "jhbkjb",
-      "isPending": false,
-      "SellerId": "70bd5f9b-81fb-4356-8303-d8091d7c40fc"
-    },
-    {
-      "id": "f753e125-0cd8-43d0-ae38-b9b9d30a538a",
-      "image": "https://plus.unsplash.com/premium_photo-1679913792906-13ccc5c84d44?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cHJvZHVjdHxlbnwwfHwwfHx8MA%3D%3D",
-      "name": "Headphone",
-      "price": "25200",
-      "description": "jhbkjb",
-      "isPending": false,
-      "SellerId": "70bd5f9b-81fb-4356-8303-d8091d7c40fc"
-    },
-    {
-      "id": "f753e125-0cd8-43d0-ae38-b9b9d30a538a",
-      "image": "https://plus.unsplash.com/premium_photo-1679913792906-13ccc5c84d44?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cHJvZHVjdHxlbnwwfHwwfHx8MA%3D%3D",
-      "name": "Headphone",
-      "price": "25200",
-      "description": "jhbkjb",
-      "isPending": false,
-      "SellerId": "70bd5f9b-81fb-4356-8303-d8091d7c40fc"
-    },
-    {
-      "id": "f753e125-0cd8-43d0-ae38-b9b9d30a538a",
-      "image": "https://plus.unsplash.com/premium_photo-1679913792906-13ccc5c84d44?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cHJvZHVjdHxlbnwwfHwwfHx8MA%3D%3D",
-      "name": "Headphone",
-      "price": "25200",
-      "description": "jhbkjb",
-      "isPending": false,
-      "SellerId": "70bd5f9b-81fb-4356-8303-d8091d7c40fc"
-    },
-    {
-      "id": "f753e125-0cd8-43d0-ae38-b9b9d30a538a",
-      "image": "https://plus.unsplash.com/premium_photo-1679913792906-13ccc5c84d44?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cHJvZHVjdHxlbnwwfHwwfHx8MA%3D%3D",
-      "name": "Headphone",
-      "price": "25200",
-      "description": "jhbkjb",
-      "isPending": false,
-      "SellerId": "70bd5f9b-81fb-4356-8303-d8091d7c40fc"
-    },
-    {
-      "id": "f753e125-0cd8-43d0-ae38-b9b9d30a538a",
-      "image": "https://plus.unsplash.com/premium_photo-1679913792906-13ccc5c84d44?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cHJvZHVjdHxlbnwwfHwwfHx8MA%3D%3D",
-      "name": "Headphone",
-      "price": "25200",
-      "description": "jhbkjb",
-      "isPending": false,
-      "SellerId": "70bd5f9b-81fb-4356-8303-d8091d7c40fc"
-    },
-    {
-      "id": "f753e125-0cd8-43d0-ae38-b9b9d30a538a",
-      "image": "https://plus.unsplash.com/premium_photo-1679913792906-13ccc5c84d44?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cHJvZHVjdHxlbnwwfHwwfHx8MA%3D%3D",
-      "name": "Headphone",
-      "price": "25200",
-      "description": "jhbkjb",
-      "isPending": false,
-      "SellerId": "70bd5f9b-81fb-4356-8303-d8091d7c40fc"
-    },
-    {
-      "id": "f753e125-0cd8-43d0-ae38-b9b9d30a538a",
-      "image": "https://plus.unsplash.com/premium_photo-1679913792906-13ccc5c84d44?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cHJvZHVjdHxlbnwwfHwwfHx8MA%3D%3D",
-      "name": "Headphone",
-      "price": "25200",
-      "description": "jhbkjb",
-      "isPending": false,
-      "SellerId": "70bd5f9b-81fb-4356-8303-d8091d7c40fc"
-    },
-    {
-      "id": "f753e125-0cd8-43d0-ae38-b9b9d30a538a",
-      "image": "https://plus.unsplash.com/premium_photo-1679913792906-13ccc5c84d44?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cHJvZHVjdHxlbnwwfHwwfHx8MA%3D%3D",
-      "name": "Headphone",
-      "price": "25200",
-      "description": "jhbkjb",
-      "isPending": false,
-      "SellerId": "70bd5f9b-81fb-4356-8303-d8091d7c40fc"
-    },
-    {
-      "id": "f753e125-0cd8-43d0-ae38-b9b9d30a538a",
-      "image": "https://plus.unsplash.com/premium_photo-1679913792906-13ccc5c84d44?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cHJvZHVjdHxlbnwwfHwwfHx8MA%3D%3D",
-      "name": "Headphone",
-      "price": "25200",
-      "description": "jhbkjb",
-      "isPending": false,
-      "SellerId": "70bd5f9b-81fb-4356-8303-d8091d7c40fc"
-    },
-    {
-      "id": "f753e125-0cd8-43d0-ae38-b9b9d30a538a",
-      "image": "https://plus.unsplash.com/premium_photo-1679913792906-13ccc5c84d44?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cHJvZHVjdHxlbnwwfHwwfHx8MA%3D%3D",
-      "name": "Headphone",
-      "price": "25200",
-      "description": "jhbkjb",
-      "isPending": false,
-      "SellerId": "70bd5f9b-81fb-4356-8303-d8091d7c40fc"
-    },
-    {
-      "id": "f753e125-0cd8-43d0-ae38-b9b9d30a538a",
-      "image": "https://plus.unsplash.com/premium_photo-1679913792906-13ccc5c84d44?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cHJvZHVjdHxlbnwwfHwwfHx8MA%3D%3D",
-      "name": "Headphone",
-      "price": "25200",
-      "description": "jhbkjb",
-      "isPending": false,
-      "SellerId": "70bd5f9b-81fb-4356-8303-d8091d7c40fc"
-    },
-    {
-      "id": "f753e125-0cd8-43d0-ae38-b9b9d30a538a",
-      "image": "https://plus.unsplash.com/premium_photo-1679913792906-13ccc5c84d44?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cHJvZHVjdHxlbnwwfHwwfHx8MA%3D%3D",
-      "name": "Headphone",
-      "price": "25200",
-      "description": "jhbkjb",
-      "isPending": false,
-      "SellerId": "70bd5f9b-81fb-4356-8303-d8091d7c40fc"
-    },
-    {
-      "id": "f753e125-0cd8-43d0-ae38-b9b9d30a538a",
-      "image": "https://plus.unsplash.com/premium_photo-1679913792906-13ccc5c84d44?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cHJvZHVjdHxlbnwwfHwwfHx8MA%3D%3D",
-      "name": "Headphone",
-      "price": "25200",
-      "description": "jhbkjb",
-      "isPending": false,
-      "SellerId": "70bd5f9b-81fb-4356-8303-d8091d7c40fc"
-    },
-    {
-      "id": "f753e125-0cd8-43d0-ae38-b9b9d30a538a",
-      "image": "https://plus.unsplash.com/premium_photo-1679913792906-13ccc5c84d44?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cHJvZHVjdHxlbnwwfHwwfHx8MA%3D%3D",
-      "name": "Headphone",
-      "price": "25200",
-      "description": "jhbkjb",
-      "isPending": false,
-      "SellerId": "70bd5f9b-81fb-4356-8303-d8091d7c40fc"
-    },
-    {
-      "id": "f753e125-0cd8-43d0-ae38-b9b9d30a538a",
-      "image": "https://plus.unsplash.com/premium_photo-1679913792906-13ccc5c84d44?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cHJvZHVjdHxlbnwwfHwwfHx8MA%3D%3D",
-      "name": "Headphone",
-      "price": "25200",
-      "description": "jhbkjb",
-      "isPending": false,
-      "SellerId": "70bd5f9b-81fb-4356-8303-d8091d7c40fc"
-    },
-    {
-      "id": "f753e125-0cd8-43d0-ae38-b9b9d30a538a",
-      "image": "https://plus.unsplash.com/premium_photo-1679913792906-13ccc5c84d44?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cHJvZHVjdHxlbnwwfHwwfHx8MA%3D%3D",
-      "name": "Headphone",
-      "price": "25200",
-      "description": "jhbkjb",
-      "isPending": false,
-      "SellerId": "70bd5f9b-81fb-4356-8303-d8091d7c40fc"
-    },
-    {
-      "id": "f753e125-0cd8-43d0-ae38-b9b9d30a538a",
-      "image": "https://plus.unsplash.com/premium_photo-1679913792906-13ccc5c84d44?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cHJvZHVjdHxlbnwwfHwwfHx8MA%3D%3D",
-      "name": "Headphone",
-      "price": "25200",
-      "description": "jhbkjb",
-      "isPending": false,
-      "SellerId": "70bd5f9b-81fb-4356-8303-d8091d7c40fc"
-    },
-    {
-      "id": "f753e125-0cd8-43d0-ae38-b9b9d30a538a",
-      "image": "https://plus.unsplash.com/premium_photo-1679913792906-13ccc5c84d44?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cHJvZHVjdHxlbnwwfHwwfHx8MA%3D%3D",
-      "name": "Headphone",
-      "price": "25200",
-      "description": "jhbkjb",
-      "isPending": false,
-      "SellerId": "70bd5f9b-81fb-4356-8303-d8091d7c40fc"
-    },
-    {
-      "id": "f753e125-0cd8-43d0-ae38-b9b9d30a538a",
-      "image": "https://plus.unsplash.com/premium_photo-1679913792906-13ccc5c84d44?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cHJvZHVjdHxlbnwwfHwwfHx8MA%3D%3D",
-      "name": "Headphone",
-      "price": "25200",
-      "description": "jhbkjb",
-      "isPending": false,
-      "SellerId": "70bd5f9b-81fb-4356-8303-d8091d7c40fc"
-    },
-    {
-      "id": "f753e125-0cd8-43d0-ae38-b9b9d30a538a",
-      "image": "https://plus.unsplash.com/premium_photo-1679913792906-13ccc5c84d44?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cHJvZHVjdHxlbnwwfHwwfHx8MA%3D%3D",
-      "name": "Headphone",
-      "price": "25200",
-      "description": "jhbkjb",
-      "isPending": false,
-      "SellerId": "70bd5f9b-81fb-4356-8303-d8091d7c40fc"
-    },
-    {
-      "id": "f753e125-0cd8-43d0-ae38-b9b9d30a538a",
-      "image": "https://plus.unsplash.com/premium_photo-1679913792906-13ccc5c84d44?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cHJvZHVjdHxlbnwwfHwwfHx8MA%3D%3D",
-      "name": "Headphone",
-      "price": "25200",
-      "description": "jhbkjb",
-      "isPending": false,
-      "SellerId": "70bd5f9b-81fb-4356-8303-d8091d7c40fc"
-    },
-    {
-      "id": "f753e125-0cd8-43d0-ae38-b9b9d30a538a",
-      "image": "https://plus.unsplash.com/premium_photo-1679913792906-13ccc5c84d44?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cHJvZHVjdHxlbnwwfHwwfHx8MA%3D%3D",
-      "name": "Headphone",
-      "price": "25200",
-      "description": "jhbkjb",
-      "isPending": false,
-      "SellerId": "70bd5f9b-81fb-4356-8303-d8091d7c40fc"
     },
     {
       "id": "f753e125-0cd8-43d0-ae38-b9b9d30a538a",
@@ -402,28 +168,20 @@
   ],
   "Cart": [
     {
-      "id": "7ed5",
-      "CustomerId": "5f77bdcd-9608-437e-82ed-ede8969eb1b2",
-      "ProductId": "6a5a9fbf-29bf-4169-9f47-96881008a5ea",
-      "quantity": 2
-    },
-    {
-      "id": "4716",
-      "CustomerId": "5f77bdcd-9608-437e-82ed-ede8969eb1b2",
-      "ProductId": null,
-      "quantity": 2
-    },
-    {
-      "id": "5ea9",
-      "CustomerId": "6d9a1ed9-5231-4479-8133-5c75adeef52e",
-      "ProductId": "6a5a9fbf-29bf-4169-9f47-96881008a5ea",
-      "quantity": 4
-    },
-    {
-      "id": "5ca3",
-      "CustomerId": "a26c6a7f-51fb-4ccf-8c48-284d0205077d",
-      "ProductId": "6a5a9fbf-29bf-4169-9f47-96881008a5ea",
-      "quantity": 1
+      "id": "bde0",
+      "customerId": "5a279954-c9c4-403c-9405-8f8c64f6dcfd",
+      "orders": [
+        {
+          "id": "31414b74-82a9-4858-97c4-94cb07b09779",
+          "productId": "6a5a9fbf-29bf-4169-9f47-96881008a5ea",
+          "quantity": 3
+        },
+        {
+          "id": "2929bee9-6a05-4c5a-aab9-361c25dfa2bb",
+          "productId": "f753e125-0cd8-43d0-ae38-b9b9d30a538a",
+          "quantity": 17
+        }
+      ]
     }
   ]
 }
