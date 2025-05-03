@@ -174,7 +174,7 @@ main {
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 30px;
   padding: 80px;
-  background-color: #f8f9fa;
+  background-color: #e4e4e4;
   min-height: 650px;
 }
 
