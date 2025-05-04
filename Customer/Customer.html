@@ -12,6 +12,14 @@
   <link rel="stylesheet" href="./Customer.css" />
   <link rel="stylesheet" href="/Styles/popup.css" />
 
+  <script>
+    // Display customer name
+    const customerNameElement = document.getElementById('CustomerName');
+    if (customerNameElement) {
+      customerNameElement.textContent = `Welcome,git  ${loggedInUser.UserName}`;
+    }
+  </script>
+
 </head>
 
 <body>

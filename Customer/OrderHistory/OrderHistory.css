@@ -1,0 +1,190 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+  }
+  
+  /* Navbar Styles (same as main page) */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+  }
+  
+  .logo-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .signout-button, .profile-button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .signout-button {
+    background-color: #f44336;
+    color: white;
+  }
+  
+  .profile-button {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .profile-dropdown {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    right: 20px;
+  }
+  
+  .profile-dropdown a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .profile-dropdown a:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .profile-menu:hover .profile-dropdown {
+    display: block;
+  }
+  
+  /* Order History Styles */
+  .order-history-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 20px;
+  }
+  
+  .order-history-container h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #333;
+  }
+  
+  .order-list {
+    display: grid;
+    gap: 20px;
+  }
+  
+  .order-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+  
+  .order-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .order-date {
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  .order-items {
+    display: grid;
+    gap: 15px;
+  }
+  
+  .order-item {
+    display: flex;
+    gap: 15px;
+    padding: 10px;
+    border-bottom: 1px solid #f5f5f5;
+  }
+  
+  .order-item:last-child {
+    border-bottom: none;
+  }
+  
+  .order-item-img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+  
+  .order-item-details {
+    flex: 1;
+  }
+  
+  .order-item-name {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .order-item-price {
+    color: #e53935;
+    font-weight: bold;
+  }
+  
+  .order-item-quantity {
+    color: #666;
+  }
+  
+  .order-total {
+    text-align: right;
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 1.1rem;
+  }
+  
+  .no-orders {
+    text-align: center;
+    padding: 40px;
+    color: #666;
+    font-size: 1.2rem;
+  }
+  
+  @media (max-width: 768px) {
+    .order-item {
+      flex-direction: column;
+    }
+    
+    .order-item-img {
+      width: 100%;
+      height: auto;
+      max-height: 200px;
+    }
+  }

@@ -1,96 +1,103 @@
+// OrderHistory.js - Corrected Version
+
 document.addEventListener('DOMContentLoaded', function() {
-    // Get the logged in user from localStorage
-    const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
-    
-    if (!loggedInUser) {
-      window.location.href = '/login.html'; // Redirect if not logged in
+  // Check if user is logged in
+  const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
+  
+  if (!loggedInUser || loggedInUser.Type !== 'Customer') {
+      window.location.href = '../index.html';
       return;
-    }
+  }
   
-    // Fetch current user data
-    fetch(`http://localhost:5000/Users/${loggedInUser.id}`)
-      .then(response => response.json())
-      .then(user => {
-        // Populate form with current user data
-        document.getElementById('fullName').value = user.FullName || '';
-        document.getElementById('userName').value = user.UserName || '';
-        document.getElementById('email').value = user.Email || '';
-        document.getElementById('phone').value = user.Phone || '';
-        document.getElementById('address').value = user.Address || '';
-        
-        // Set welcome message
-        document.getElementById('CustomerName').textContent = `Welcome, ${user.FullName || user.UserName}`;
-      })
-      .catch(error => {
-        console.error('Error fetching user data:', error);
-        swal("Error", "Failed to load profile data", "error");
-      });
+  // Display customer name
+  const customerNameElement = document.getElementById('CustomerName');
+  if (customerNameElement) {
+      customerNameElement.textContent = `Order History - ${loggedInUser.UserName}`;
+  }
   
-    // Handle form submission
-    document.getElementById('updateProfileForm').addEventListener('submit', function(e) {
-      e.preventDefault();
+  // Fetch order history
+  loadOrderHistory(loggedInUser.id);
+});
+
+async function loadOrderHistory(customerId) {
+  try {
+      // Fetch carts data
+      const cartsResponse = await fetch('http://localhost:5000/Cart');
+      const carts = await cartsResponse.json();
       
-      const formData = {
-        FullName: document.getElementById('fullName').value,
-        UserName: document.getElementById('userName').value,
-        Email: document.getElementById('email').value,
-        Phone: document.getElementById('phone').value,
-        Address: document.getElementById('address').value,
-      };
-  
-      // Only update password if a new one was provided
-      const newPassword = document.getElementById('password').value;
-      if (newPassword) {
-        formData.Password = newPassword;
+      // Fetch products data
+      const productsResponse = await fetch('http://localhost:5000/Products?isPending=false');
+      const products = await productsResponse.json();
+      
+      // Find the cart for this customer
+      const customerCart = carts.find(cart => cart.customerId === customerId);
+      const orderHistoryList = document.getElementById('orderHistoryList');
+      
+      // Clear previous content
+      orderHistoryList.innerHTML = '';
+      
+      if (!customerCart || !customerCart.orders || customerCart.orders.length === 0) {
+          orderHistoryList.innerHTML = '<div class="no-orders">You have no orders yet.</div>';
+          return;
       }
-  
-      // Update user data
-      fetch(`http://localhost:5000/Users/${loggedInUser.id}`, {
-        method: 'PUT',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData)
-      })
-      .then(response => {
-        if (!response.ok) {
-          throw new Error('Network response was not ok');
-        }
-        return response.json();
-      })
-      .then(updatedUser => {
-        // Update localStorage with new user data
-        const updatedLoggedInUser = {
-          ...loggedInUser,
-          FullName: updatedUser.FullName,
-          UserName: updatedUser.UserName,
-          Email: updatedUser.Email
-        };
-        localStorage.setItem('loggedInUser', JSON.stringify(updatedLoggedInUser));
-        
-        swal("Success", "Profile updated successfully!", "success")
-          .then(() => {
-            window.location.href = 'index.html';
-          });
-      })
-      .catch(error => {
-        console.error('Error updating profile:', error);
-        swal("Error", "Failed to update profile", "error");
+      
+      // Create a container for all orders
+      const ordersContainer = document.createElement('div');
+      ordersContainer.className = 'orders-container';
+      
+      // Process each order item
+      let hasValidOrders = false;
+      let totalAmount = 0;
+      
+      customerCart.orders.forEach(order => {
+          if (!order.productId) return;
+          
+          // Find the product details
+          const product = products.find(p => p.id === order.productId);
+          if (!product) return;
+          
+          hasValidOrders = true;
+          const quantity = order.quantity || 1;
+          const itemTotal = parseFloat(product.price) * quantity;
+          totalAmount += itemTotal;
+          
+          // Create order item element
+          const orderItem = document.createElement('div');
+          orderItem.className = 'order-item';
+          orderItem.innerHTML = `
+              <img src="${product.image}" alt="${product.name}" class="order-item-img">
+              <div class="order-item-details">
+                  <div class="order-item-name">${product.name}</div>
+                  <div class="order-item-price">Price: $${parseFloat(product.price).toFixed(2)}</div>
+                  <div class="order-item-quantity">Quantity: ${quantity}</div>
+                  <div class="order-item-total">Total: $${itemTotal.toFixed(2)}</div>
+              </div>
+          `;
+          ordersContainer.appendChild(orderItem);
       });
-    });
-  
-    // Profile dropdown functionality
-    const profileMenu = document.querySelector('.profile-menu');
-    const profileBtn = document.getElementById('profileBtn');
-    
-    profileBtn.addEventListener('click', function(e) {
-      e.stopPropagation();
-      profileMenu.classList.toggle('active');
-    });
-    
-    document.addEventListener('click', function(e) {
-      if (!profileMenu.contains(e.target)) {
-        profileMenu.classList.remove('active');
+      
+      if (!hasValidOrders) {
+          orderHistoryList.innerHTML = '<div class="no-orders">You have no valid orders.</div>';
+          return;
       }
-    });
-  });
+      
+      // Add total amount
+      const totalElement = document.createElement('div');
+      totalElement.className = 'order-total';
+      totalElement.innerHTML = `<strong>Grand Total: $${totalAmount.toFixed(2)}</strong>`;
+      ordersContainer.appendChild(totalElement);
+      
+      // Add to the page
+      orderHistoryList.appendChild(ordersContainer);
+      
+  } catch (error) {
+      console.error('Error loading order history:', error);
+      const orderHistoryList = document.getElementById('orderHistoryList');
+      orderHistoryList.innerHTML = `
+          <div class="no-orders">
+              Error loading your order history. Please try again later.
+              <p>${error.message}</p>
+          </div>
+      `;
+  }
+}
