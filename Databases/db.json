@@ -21,13 +21,13 @@
       "Type": "Seller"
     },
     {
-      "FullName": "Ahmed",
-      "UserName": "mostafa",
       "Email": "mostafaa@gmail.com",
+      "Password": "12345678",
+      "UserName": "mostafa",
+      "FullName": "Ahmed",
       "Phone": "01069423530",
       "Address": "9 - sayed zaidan st",
       "Type": "Customer",
-      "Password": "12345678",
       "id": "5a279954-c9c4-403c-9405-8f8c64f6dcfd"
     },
     {
@@ -188,6 +188,15 @@
           "id": "2929bee9-6a05-4c5a-aab9-361c25dfa2bb",
           "productId": "f753e125-0cd8-43d0-ae38-b9b9d30a538a",
           "quantity": 17
+        },
+        {
+          "id": "670d8593-dccc-40e9-af43-80031e23ad79",
+          "quantity": 15
+        },
+        {
+          "id": "ebda3f06-2b00-452a-88a4-c71f62706998",
+          "productId": "watches",
+          "quantity": 1
         }
       ]
     },
