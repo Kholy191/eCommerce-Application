@@ -1,32 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Product Manager</title>
+    <link rel="stylesheet" href="edit.delete.css" />
+    <script src="Admin.js"></script>
+    <link rel="stylesheet" href="../../Styles/index.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <title>Product Manager</title>
-  <link rel="stylesheet" href="edit.delete.css" />
-  <script src="Admin.js"></script>
-</head>
+  <body>
+    <header class="navbar">
+      <div class="navbar-left">
+        <img
+          src="https://icons.iconarchive.com/icons/jozef89/services-flat/512/ecommerce-icon.png"
+          alt="Logo"
+          class="logo"
+        />
+        <span class="logo-text">Product Manager</span>
+      </div>
+      <form class="search-bar" action="#">
+        <input type="text" placeholder="Search products..." />
+      </form>
+      <div class="navbar-right">
+        <button
+          onclick="window.location.href='/Admin/Admin.html'"
+          class="back-button"
+        >
+          ⬅ Back
+        </button>
+      </div>
+    </header>
 
-<body>
-  <header class="navbar">
-    <div class="navbar-left">
-      <img src="https://icons.iconarchive.com/icons/jozef89/services-flat/512/ecommerce-icon.png" alt="Logo"
-        class="logo" />
-      <span class="logo-text">Product Manager</span>
-    </div>
-    <div class="navbar-right">
-      <button onclick="window.location.href='/Admin/Admin.html'" class="back-button">
-        ⬅ Back
-      </button>
-    </div>
-  </header>
+    <main class="products-container" id="productList">
+      <div>Loading Products...</div>
+    </main>
 
-  <main class="products-container" id="productList">
-    <div>Loading Products...</div>
-  </main>
-
-  <script src="edit.delete.js"></script>
-</body>
-
+    <script src="edit.delete.js"></script>
+    <script src="../../Customer/Search.js"></script>
+  </body>
 </html>

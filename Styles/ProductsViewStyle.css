@@ -9,6 +9,7 @@
 .products-section {
   background-color: #f5f7fa;
   padding: 40px 0 80px;
+  margin-right: 10%;
 }
 
 .products-header {
@@ -380,7 +381,7 @@
 .products-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-  gap: 25px;
+  gap: 30px;
   margin-bottom: 40px;
 }
 
@@ -666,6 +667,10 @@
   .products-grid {
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   }
+  .products-section {
+    padding: 30px 0 50px;
+    margin-right: 0px;
+  }
 }
 
 @media (max-width: 576px) {
@@ -675,6 +680,7 @@
 
   .products-section {
     padding: 30px 0 50px;
+    margin-right: 0px;
   }
 
   .products-header h2 {

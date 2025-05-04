@@ -20,7 +20,7 @@ function fetchProducts() {
         console.error("Products not found in response data");
         return;
       }
-      
+
       productsArray = data;
       renderProducts(productsArray);
     })
@@ -32,17 +32,19 @@ function fetchProducts() {
 // Set up event listeners
 function setupEventListeners() {
   // Category checkboxes
-  categoryCheckboxes.forEach(checkbox => {
-    checkbox.addEventListener("change", function() {
+  categoryCheckboxes.forEach((checkbox) => {
+    checkbox.addEventListener("change", function () {
       if (this.value === "all" && this.checked) {
         // Uncheck other category checkboxes when "All" is selected
-        categoryCheckboxes.forEach(cb => {
+        categoryCheckboxes.forEach((cb) => {
           if (cb.value !== "all") cb.checked = false;
         });
         renderProducts(productsArray);
       } else if (this.value !== "all" && this.checked) {
         // Uncheck "All" when a specific category is selected
-        document.querySelector('input[name="category"][value="all"]').checked = false;
+        document.querySelector(
+          'input[name="category"][value="all"]'
+        ).checked = false;
         filterByCategory(this.value);
       }
     });
@@ -51,8 +53,8 @@ function setupEventListeners() {
 
 // Filter products by category
 function filterByCategory(category) {
-  const filteredProducts = productsArray.filter(product => 
-    product.Category.toLowerCase() === category.toLowerCase()
+  const filteredProducts = productsArray.filter(
+    (product) => product.Category.toLowerCase() === category.toLowerCase()
   );
   renderProducts(filteredProducts);
 }
@@ -63,14 +65,15 @@ function renderProducts(products) {
     console.error("Container not found!");
     return;
   }
-  
+
   container.innerHTML = "";
-  
+
   if (products.length === 0) {
-    container.innerHTML = "<p class='no-products'>No products found in this category.</p>";
+    container.innerHTML =
+      "<p class='no-products'>No products found in this category.</p>";
     return;
   }
-  
+
   products.forEach((item) => {
     const card = document.createElement("div");
     card.className = "product-card";
