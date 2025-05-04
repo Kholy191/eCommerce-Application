@@ -99,6 +99,16 @@
       "Phone": "01069423530",
       "Address": "9 - sayed zaidan st",
       "Type": "Seller"
+    },
+    {
+      "id": "b7c4d147-679f-4145-a4f9-365a2c28c341",
+      "FullName": "Ahmed ElKholy",
+      "UserName": "Customer1",
+      "Email": "mariemcustomer@gmail.com",
+      "Password": "12345678",
+      "Phone": "01069423530",
+      "Address": "9 - sayed zaidan st",
+      "Type": "Customer"
     }
   ],
   "Products": [
@@ -112,13 +122,11 @@
       "SellerId": "fdee"
     },
     {
-      "id": "f753e125-0cd8-43d0-ae38-b9b9d30a538a",
       "image": "https://plus.unsplash.com/premium_photo-1679913792906-13ccc5c84d44?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cHJvZHVjdHxlbnwwfHwwfHx8MA%3D%3D",
       "name": "Headphone",
-      "price": "25200",
+      "price": "2416",
       "description": "jhbkjb",
-      "isPending": false,
-      "SellerId": "70bd5f9b-81fb-4356-8303-d8091d7c40fc"
+      "id": "f753e125-0cd8-43d0-ae38-b9b9d30a538a"
     },
     {
       "id": "f753e125-0cd8-43d0-ae38-b9b9d30a538a",
@@ -180,6 +188,22 @@
           "id": "2929bee9-6a05-4c5a-aab9-361c25dfa2bb",
           "productId": "f753e125-0cd8-43d0-ae38-b9b9d30a538a",
           "quantity": 17
+        }
+      ]
+    },
+    {
+      "id": "67cb",
+      "customerId": "b7c4d147-679f-4145-a4f9-365a2c28c341",
+      "orders": [
+        {
+          "id": "d7d9346d-5842-49ff-b26c-7fe7fde64459",
+          "productId": "f753e125-0cd8-43d0-ae38-b9b9d30a538a",
+          "quantity": 1
+        },
+        {
+          "id": "22a5d016-aee0-433a-827a-78fb9dc220b0",
+          "productId": "6a5a9fbf-29bf-4169-9f47-96881008a5ea",
+          "quantity": 10
         }
       ]
     }

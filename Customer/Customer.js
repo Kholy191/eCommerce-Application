@@ -32,7 +32,8 @@ window.addEventListener("load", function () {
     container.innerHTML = "";
 
     if (products.length === 0) {
-      container.innerHTML = '<p class="no-products">No products found matching your criteria.</p>';
+      container.innerHTML =
+        '<p class="no-products">No products found matching your criteria.</p>';
       return;
     }
 
@@ -51,7 +52,7 @@ window.addEventListener("load", function () {
       price.textContent = `$${parseFloat(item.price).toFixed(2)}`;
 
       const button = document.createElement("button");
-      button.type = "button"; 
+      button.type = "button";
       button.className = "add-to-cart-btn";
       button.textContent = "Add to Cart";
 
@@ -146,38 +147,38 @@ window.addEventListener("load", function () {
     });
   }
 
-  // Filter products based on search input
-  function filterProducts() {
-    const searchTerm = searchInput.value.toLowerCase();
-    
-    if (!searchTerm) {
-      renderProducts(productsArray);
-      return;
-    }
+  // // Filter products based on search input
+  // function filterProducts() {
+  //   const searchTerm = searchInput.value.toLowerCase();
 
-    const filteredProducts = productsArray.filter(item => 
-      item.name.toLowerCase().includes(searchTerm)
-    );
-    
-    renderProducts(filteredProducts);
-  }
+  //   if (!searchTerm) {
+  //     renderProducts(productsArray);
+  //     return;
+  //   }
 
-  // Add event listener for search input
-  searchInput.addEventListener("input", filterProducts);
+  //   const filteredProducts = productsArray.filter((item) =>
+  //     item.name.toLowerCase().includes(searchTerm)
+  //   );
 
-  // Function to animate the button
-  function animateButtonSuccess(button) {
-    const originalText = button.textContent;
-    button.textContent = "✓ Added";
-    button.style.backgroundColor = "#28a745"; // Green
-    button.style.color = "#fff";
+  //   renderProducts(filteredProducts);
+  // }
 
-    setTimeout(() => {
-      button.textContent = originalText;
-      button.style.backgroundColor = ""; // reset
-      button.style.color = "";
-    }, 2000);
-  }
+  // // Add event listener for search input
+  // searchInput.addEventListener("input", filterProducts);
+
+  // // Function to animate the button
+  // function animateButtonSuccess(button) {
+  //   const originalText = button.textContent;
+  //   button.textContent = "✓ Added";
+  //   button.style.backgroundColor = "#28a745"; // Green
+  //   button.style.color = "#fff";
+
+  //   setTimeout(() => {
+  //     button.textContent = originalText;
+  //     button.style.backgroundColor = ""; // reset
+  //     button.style.color = "";
+  //   }, 2000);
+  // }
 
   // Initialize
   fetchAndDisplayProducts();

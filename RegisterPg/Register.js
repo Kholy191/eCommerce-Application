@@ -29,7 +29,7 @@ form.addEventListener("submit", function (e) {
     .then((res) => res.json())
     .then((existingUsers) => {
       if (existingUsers.length > 0) {
-        swal("احا!", "الإيميل ده مستخدم قبل كده يا نجم!", "error");
+        swal("Existed Email", "error");
         return;
       }
 
