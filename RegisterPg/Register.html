@@ -28,35 +28,103 @@
     <main class="register-form">
       <section class="form-container">
         <h2>Create an Account</h2>
+
+        <!-- Optional: Form Progress Indicator -->
+        <!--
+        <div class="form-progress">
+          <div class="progress-step active">1</div>
+          <div class="progress-step">2</div>
+          <div class="progress-step">3</div>
+        </div>
+        -->
+
         <form id="registerForm">
           <div class="form-group">
             <label for="name">Full Name</label>
-            <input type="text" id="name" name="name" required />
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Enter your full name"
+              required
+            />
+            <div class="error-message" id="name-error">
+              Please enter your full name
+            </div>
           </div>
 
           <div class="form-group">
             <label for="username">Username</label>
-            <input type="text" id="username" name="username" required />
+            <input
+              type="text"
+              id="username"
+              name="username"
+              placeholder="Choose a username"
+              required
+            />
+            <div class="error-message" id="username-error">
+              Username must be at least 3 characters
+            </div>
           </div>
 
           <div class="form-group">
             <label for="email">Email</label>
-            <input type="email" id="email" name="email" required />
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter your email address"
+              required
+            />
+            <div class="error-message" id="email-error">
+              Please enter a valid email address
+            </div>
           </div>
 
           <div class="form-group">
             <label for="password">Password</label>
-            <input type="password" id="password" name="password" required />
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Create a strong password"
+              required
+            />
+            <div class="password-strength">
+              <div class="strength-meter" id="strength-meter"></div>
+            </div>
+            <div class="strength-text" id="strength-text"></div>
+            <div class="error-message" id="password-error">
+              Password must be at least 8 characters
+            </div>
           </div>
 
           <div class="form-group">
             <label for="phone">Phone Number</label>
-            <input type="tel" id="phone" name="phone" required />
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="Enter your phone number"
+              required
+            />
+            <div class="error-message" id="phone-error">
+              Please enter a valid phone number
+            </div>
           </div>
 
           <div class="form-group">
             <label for="address">Address</label>
-            <input type="text" id="address" name="address" required />
+            <input
+              type="text"
+              id="address"
+              name="address"
+              placeholder="Enter your address"
+              required
+            />
+            <div class="error-message" id="address-error">
+              Please enter your address
+            </div>
           </div>
 
           <div class="form-group">
@@ -71,9 +139,12 @@
                 <span>Customer</span>
               </label>
             </div>
+            <div class="error-message" id="userType-error">
+              Please select a user type
+            </div>
           </div>
 
-          <button type="submit" class="auth-button">Register</button>
+          <button type="submit" class="auth-button">Create Account</button>
         </form>
       </section>
     </main>

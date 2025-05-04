@@ -15,7 +15,7 @@
   <body>
     <section class="sign-in">
       <div class="form-container">
-        <h2>Sign In</h2>
+        <h2>Welcome Back</h2>
         <div class="logo-container">
           <img
             src="https://icons.iconarchive.com/icons/jozef89/services-flat/512/ecommerce-icon.png"
@@ -34,6 +34,9 @@
               placeholder="Enter your email"
               required
             />
+            <div class="error-message" id="email-error">
+              Please enter a valid email address
+            </div>
           </div>
 
           <div class="input-group">
@@ -45,6 +48,9 @@
               placeholder="Enter your password"
               required
             />
+            <div class="error-message" id="password-error">
+              Password must be at least 6 characters
+            </div>
           </div>
 
           <button type="submit" class="submit-btn">Sign In</button>
@@ -53,6 +59,23 @@
             Don't have an account?
             <a href="/RegisterPg/Register.html">Sign Up</a>
           </p>
+
+          <!-- Optional: Social Login Section -->
+          <!--
+          <div class="social-login">
+            <div class="social-buttons">
+              <div class="social-button">
+                <img src="google-icon.png" alt="Google" width="20" height="20">
+              </div>
+              <div class="social-button">
+                <img src="facebook-icon.png" alt="Facebook" width="20" height="20">
+              </div>
+              <div class="social-button">
+                <img src="apple-icon.png" alt="Apple" width="20" height="20">
+              </div>
+            </div>
+          </div>
+          -->
         </form>
       </div>
     </section>

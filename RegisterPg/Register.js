@@ -29,7 +29,12 @@ form.addEventListener("submit", function (e) {
     .then((res) => res.json())
     .then((existingUsers) => {
       if (existingUsers.length > 0) {
-        swal("Existed Email", "error");
+        swal({
+          title: "Oops!",
+          text: "This email already exists.",
+          icon: "warning",
+          button: "Try Again",
+        });
         return;
       }
 
