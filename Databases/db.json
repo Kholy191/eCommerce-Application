@@ -119,14 +119,18 @@
       "price": "500",
       "description": "dafafa",
       "isPending": false,
-      "SellerId": "fdee"
+      "SellerId": "fdee",
+      "Category": "Accessories"
     },
     {
       "image": "https://plus.unsplash.com/premium_photo-1679913792906-13ccc5c84d44?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cHJvZHVjdHxlbnwwfHwwfHx8MA%3D%3D",
       "name": "Headphone",
       "price": "2416",
       "description": "jhbkjb",
-      "id": "f753e125-0cd8-43d0-ae38-b9b9d30a538a"
+      "id": "f753e125-0cd8-43d0-ae38-b9b9d30a538a",
+      "isPending": false,
+      "SellerId": "70bd5f9b-81fb-4356-8303-d8091d7c40fc",
+      "Category": "Electronics"
     },
     {
       "id": "f753e125-0cd8-43d0-ae38-b9b9d30a538a",
@@ -135,7 +139,8 @@
       "price": "25200",
       "description": "jhbkjb",
       "isPending": false,
-      "SellerId": "70bd5f9b-81fb-4356-8303-d8091d7c40fc"
+      "SellerId": "70bd5f9b-81fb-4356-8303-d8091d7c40fc",
+      "Category": "Electronics"
     },
     {
       "id": "f753e125-0cd8-43d0-ae38-b9b9d30a538a",
@@ -144,7 +149,8 @@
       "price": "25200",
       "description": "jhbkjb",
       "isPending": false,
-      "SellerId": "70bd5f9b-81fb-4356-8303-d8091d7c40fc"
+      "SellerId": "70bd5f9b-81fb-4356-8303-d8091d7c40fc",
+      "Category": "Electronics"
     },
     {
       "id": "f753e125-0cd8-43d0-ae38-b9b9d30a538a",
@@ -153,7 +159,8 @@
       "price": "25200",
       "description": "jhbkjb",
       "isPending": false,
-      "SellerId": "70bd5f9b-81fb-4356-8303-d8091d7c40fc"
+      "SellerId": "70bd5f9b-81fb-4356-8303-d8091d7c40fc",
+      "Category": "Electronics"
     },
     {
       "id": "f753e125-0cd8-43d0-ae38-b9b9d30a538a",
@@ -162,7 +169,8 @@
       "price": "25200",
       "description": "jhbkjb",
       "isPending": false,
-      "SellerId": "70bd5f9b-81fb-4356-8303-d8091d7c40fc"
+      "SellerId": "70bd5f9b-81fb-4356-8303-d8091d7c40fc",
+      "Category": "Electronics"
     },
     {
       "id": "f753e125-0cd8-43d0-ae38-b9b9d30a538a",
@@ -171,7 +179,8 @@
       "price": "25200",
       "description": "jhbkjb",
       "isPending": false,
-      "SellerId": "70bd5f9b-81fb-4356-8303-d8091d7c40fc"
+      "SellerId": "70bd5f9b-81fb-4356-8303-d8091d7c40fc",
+      "Category": "Electronics"
     }
   ],
   "Cart": [
@@ -191,7 +200,7 @@
         },
         {
           "id": "670d8593-dccc-40e9-af43-80031e23ad79",
-          "quantity": 15
+          "quantity": 19
         },
         {
           "id": "ebda3f06-2b00-452a-88a4-c71f62706998",

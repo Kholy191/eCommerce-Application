@@ -1,16 +1,18 @@
-window.addEventListener("load", function () {
-  // تأكد من وجود الـ container
-  const container = document.getElementById("Products");
+// Global variables
+let productsArray = [];
 
-  if (!container) {
-    console.error("Container not found!");
-    return;
-  }
+// DOM elements
+const container = document.getElementById("Products");
+const categoryCheckboxes = document.querySelectorAll('input[name="category"]');
 
-  // Array لتخزين المنتجات
-  let productsArray = [];
+// Initialize the page
+function init() {
+  fetchProducts();
+  setupEventListeners();
+}
 
-  // جلب المنتجات من السيرفر
+// Fetch products from server
+function fetchProducts() {
   fetch("http://localhost:5000/Products?isPending=false")
     .then((res) => res.json())
     .then((data) => {
@@ -18,54 +20,83 @@ window.addEventListener("load", function () {
         console.error("Products not found in response data");
         return;
       }
-
-      // تخزين المنتجات في array
+      
       productsArray = data;
-
-      // مسح المحتوى القديم داخل الـ container
-      container.innerHTML = "";
-
-      // إضافة المنتجات إلى الـ container
-      productsArray.forEach((item) => {
-        const card = document.createElement("div");
-        card.className = "product-card";
-
-        const img = document.createElement("img");
-        img.src = item.image;
-        img.alt = item.name;
-
-        const title = document.createElement("h3");
-        title.textContent = item.name;
-
-        const price = document.createElement("p");
-        price.textContent = `$${parseFloat(item.price).toFixed(2)}`;
-
-        const button = document.createElement("button");
-        button.className = "add-to-cart-btn";
-        button.textContent = "Add to Cart";
-
-        // إضافة العناصر للـ product-card
-        card.appendChild(img);
-        card.appendChild(title);
-        card.appendChild(price);
-        card.appendChild(button);
-
-        // إضافة الـ product-card للـ container
-        container.appendChild(card);
-      });
+      renderProducts(productsArray);
     })
     .catch((error) => {
       console.error("Error fetching products:", error);
     });
-});
+}
 
-const footer = document.createElement("footer");
-footer.innerHTML = `
-  <p>
-    © 2025 Ecommerce. All rights reserved. 
-    <a href="#">Privacy Policy</a> |
-    <a href="#">Terms of Service</a>
-  </p>
-`;
+// Set up event listeners
+function setupEventListeners() {
+  // Category checkboxes
+  categoryCheckboxes.forEach(checkbox => {
+    checkbox.addEventListener("change", function() {
+      if (this.value === "all" && this.checked) {
+        // Uncheck other category checkboxes when "All" is selected
+        categoryCheckboxes.forEach(cb => {
+          if (cb.value !== "all") cb.checked = false;
+        });
+        renderProducts(productsArray);
+      } else if (this.value !== "all" && this.checked) {
+        // Uncheck "All" when a specific category is selected
+        document.querySelector('input[name="category"][value="all"]').checked = false;
+        filterByCategory(this.value);
+      }
+    });
+  });
+}
 
-document.body.appendChild(footer);
+// Filter products by category
+function filterByCategory(category) {
+  const filteredProducts = productsArray.filter(product => 
+    product.Category.toLowerCase() === category.toLowerCase()
+  );
+  renderProducts(filteredProducts);
+}
+
+// Render products to the DOM
+function renderProducts(products) {
+  if (!container) {
+    console.error("Container not found!");
+    return;
+  }
+  
+  container.innerHTML = "";
+  
+  if (products.length === 0) {
+    container.innerHTML = "<p class='no-products'>No products found in this category.</p>";
+    return;
+  }
+  
+  products.forEach((item) => {
+    const card = document.createElement("div");
+    card.className = "product-card";
+
+    const img = document.createElement("img");
+    img.src = item.image;
+    img.alt = item.name;
+
+    const title = document.createElement("h3");
+    title.textContent = item.name;
+
+    const price = document.createElement("p");
+    price.textContent = `$${parseFloat(item.price).toFixed(2)}`;
+
+    const button = document.createElement("button");
+    button.className = "add-to-cart-btn";
+    button.textContent = "Add to Cart";
+
+    card.appendChild(img);
+    card.appendChild(title);
+    card.appendChild(price);
+    card.appendChild(button);
+
+    container.appendChild(card);
+  });
+}
+
+// Initialize the page when loaded
+window.addEventListener("load", init);
