@@ -63,7 +63,7 @@
         <div class="users-header">
           <h2>User List</h2>
           <div class="search-box">
-            <input type="text" placeholder="Search users..." />
+            <input type="text" placeholder="Search users..." id="Search" />
             <i class="fas fa-search"></i>
           </div>
         </div>
@@ -92,61 +92,6 @@
                   </button>
                 </td>
               </tr>
-              <tr></tr>
-              <tr>
-                <td class="user-name">
-                  <span>Michael Smith</span>
-                </td>
-                <td>michael.smith@example.com</td>
-                <td>Seller</td>
-                <td>Feb 22, 2023</td>
-                <td class="actions">
-                  <button class="action-btn delete-btn" title="Delete">
-                    <i class="fas fa-trash"></i>
-                  </button>
-                </td>
-              </tr>
-              <tr>
-                <td class="user-name">
-                  <span>Michael Smith</span>
-                </td>
-                <td>michael.smith@example.com</td>
-                <td>Seller</td>
-                <td>Feb 22, 2023</td>
-                <td class="actions">
-                  <button class="action-btn delete-btn" title="Delete">
-                    <i class="fas fa-trash"></i>
-                  </button>
-                </td>
-              </tr>
-              <tr></tr>
-              <tr>
-                <td class="user-name">
-                  <span>Michael Smith</span>
-                </td>
-                <td>michael.smith@example.com</td>
-                <td>Seller</td>
-                <td>Feb 22, 2023</td>
-                <td class="actions">
-                  <button class="action-btn delete-btn" title="Delete">
-                    <i class="fas fa-trash"></i>
-                  </button>
-                </td>
-              </tr>
-              <tr></tr>
-              <tr>
-                <td class="user-name">
-                  <span>Michael Smith</span>
-                </td>
-                <td>michael.smith@example.com</td>
-                <td>Seller</td>
-                <td>Feb 22, 2023</td>
-                <td class="actions">
-                  <button class="action-btn delete-btn" title="Delete">
-                    <i class="fas fa-trash"></i>
-                  </button>
-                </td>
-              </tr>
             </tbody>
           </table>
         </div>
@@ -156,15 +101,11 @@
             >Showing 1 to 6 of 1,254 entries</span
           >
           <div class="page-buttons">
-            <button class="page-btn" disabled>
+            <button class="page-btn" id="Left">
               <i class="fas fa-chevron-left"></i>
             </button>
-            <button class="page-btn active">1</button>
-            <button class="page-btn">2</button>
-            <button class="page-btn">3</button>
-            <span>...</span>
-            <button class="page-btn">210</button>
-            <button class="page-btn">
+            <div class="page-buttons" id="Pages"></div>
+            <button class="page-btn" id="Right">
               <i class="fas fa-chevron-right"></i>
             </button>
           </div>
