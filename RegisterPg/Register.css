@@ -509,3 +509,14 @@ footer {
     align-items: flex-start;
   }
 }
+
+.error-message {
+  display: none;
+  color: red;
+  font-size: 0.9em;
+  margin-top: 4px;
+}
+
+.error-message.show {
+  display: block;
+}

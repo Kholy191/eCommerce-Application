@@ -21,20 +21,20 @@
       "Type": "Seller"
     },
     {
-      "Email": "mostafaa@gmail.com",
-      "Password": "12345678",
-      "UserName": "mostafa",
-      "FullName": "Ahmed",
-      "Phone": "01069423530",
-      "Address": "9 - sayed zaidan st",
-      "Type": "Customer",
-      "id": "5a279954-c9c4-403c-9405-8f8c64f6dcfd"
-    },
-    {
       "id": "b7c4d147-679f-4145-a4f9-365a2c28c341",
       "FullName": "Ahmed ElKholy",
       "UserName": "Customer1",
       "Email": "mariemcustomer@gmail.com",
+      "Password": "12345678",
+      "Phone": "01069423530",
+      "Address": "9 - sayed zaidan st",
+      "Type": "Customer"
+    },
+    {
+      "id": "b8328daf-4314-43d2-9f04-0b5040e2d08c",
+      "FullName": "Ahmed ElKholy",
+      "UserName": "a.ElkHOLY",
+      "Email": "midoarz2000@gmail.com",
       "Password": "12345678",
       "Phone": "01069423530",
       "Address": "9 - sayed zaidan st",
@@ -111,24 +111,6 @@
       "isPending": false,
       "SellerId": "70bd5f9b-81fb-4356-8303-d8091d7c40fc",
       "Category": "Electronics"
-    },
-    {
-      "id": "53e6a667-c91e-4b34-9968-e960cfeb4121",
-      "image": "https://plus.unsplash.com/premium_photo-1679913792906-13ccc5c84d44?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cHJvZHVjdHxlbnwwfHwwfHx8MA%3D%3D",
-      "name": "Watches",
-      "price": "2414",
-      "description": "ASV",
-      "isPending": false,
-      "SellerId": "70bd5f9b-81fb-4356-8303-d8091d7c40fc"
-    },
-    {
-      "id": "1eb78cea-0806-4eee-9b7a-cd5824f3c708",
-      "image": "https://burst.shopifycdn.com/photos/wrist-watches.jpg?width=1000&format=pjpg&exif=0&iptc=0",
-      "name": "Mobiles",
-      "price": "1424",
-      "description": "afavg",
-      "isPending": false,
-      "SellerId": "70bd5f9b-81fb-4356-8303-d8091d7c40fc"
     }
   ],
   "Cart": [

@@ -347,3 +347,10 @@ h2 {
     font-size: 15px;
   }
 }
+
+.error-message {
+  display: none;
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 4px;
+}

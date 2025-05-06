@@ -1,27 +1,48 @@
 document
   .querySelector(".sign-in-form")
   .addEventListener("submit", function (e) {
-    e.preventDefault(); // Prevents the form from refreshing the page
+    e.preventDefault();
 
-    const email = document.getElementById("email").value;
-    const password = document.getElementById("password").value;
+    const emailInput = document.getElementById("email");
+    const passwordInput = document.getElementById("password");
+    const emailError = document.getElementById("email-error");
+    const passwordError = document.getElementById("password-error");
 
-    // Make sure the server is running and the API endpoint is correct
+    const email = emailInput.value.trim();
+    const password = passwordInput.value.trim();
+
+    let isValid = true;
+
+    // Reset errors
+    emailError.style.display = "none";
+    passwordError.style.display = "none";
+
+    // Email validation
+    if (!email || !email.includes("@") || !email.includes(".")) {
+      emailError.style.display = "block";
+      isValid = false;
+    }
+
+    // Password validation
+    if (!password || password.length < 6) {
+      passwordError.style.display = "block";
+      isValid = false;
+    }
+
+    if (!isValid) return;
+
+    // If validation passed, proceed to fetch
     fetch(`http://localhost:5000/Users?Email=${email}`)
       .then((res) => res.json())
       .then((users) => {
-        // Find the user with matching email and password (case insensitive comparison)
         const user = users.find(
           (u) =>
-            u.Email.toLowerCase() === email.toLowerCase() && u.Password === password
+            u.Email.toLowerCase() === email.toLowerCase() &&
+            u.Password === password
         );
 
         if (user) {
-          // Store the user data in localStorage if found
           localStorage.setItem("loggedInUser", JSON.stringify(user));
-          console.log(localStorage.getItem("loggedInUser")); // Log the data for debugging
-
-          // Redirect based on user type
           if (user.Type === "Admin") {
             window.location.href = "/Admin/Admin.html";
           } else if (user.Type === "Seller") {
@@ -36,7 +57,7 @@ document
         }
       })
       .catch((err) => {
-        console.error("Error:", err); // Log detailed error message for debugging
+        console.error("Error:", err);
         alert("Something went wrong while connecting to server.");
       });
   });
