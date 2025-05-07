@@ -1,3 +1,5 @@
+
+
 // Product Search and Filter Functionality
 document.addEventListener("DOMContentLoaded", function() {
     const container = document.getElementById("Products");

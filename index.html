@@ -1,262 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ecommerce App</title>
-    <link rel="stylesheet" href="/Styles/index.css" />
-    <link
-      rel="icon"
-      type="image/png"
-      href="https://icons.iconarchive.com/icons/jozef89/services-flat/512/ecommerce-icon.png"
-    />
-    <link rel="stylesheet" href="/Styles/ProductsViewStyle.css" />
-  </head>
-  <body>
-    <header>
-      <nav class="navbar">
-        <div class="logo-container">
-          <a href="index.html">
-            <img
-              src="https://icons.iconarchive.com/icons/jozef89/services-flat/512/ecommerce-icon.png"
-              alt="Website Icon"
-              class="logo"
-          /></a>
 
-          <a href="index.html" class="logo-text">Ecommerce</a>
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ecommerce App</title>
+  <link rel="stylesheet" href="/Styles/index.css" />
+  <link rel="icon" type="image/png"
+    href="https://icons.iconarchive.com/icons/jozef89/services-flat/512/ecommerce-icon.png" />
+  <link rel="stylesheet" href="/Styles/ProductsViewStyle.css" />
+</head>
 
-        <form class="search-bar" action="#">
-          <input type="text" placeholder="Search products..." />
-        </form>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo-container">
+        <a href="index.html">
+          <img src="https://icons.iconarchive.com/icons/jozef89/services-flat/512/ecommerce-icon.png" alt="Website Icon"
+            class="logo" /></a>
 
-        <div class="auth-buttons">
-          <button id="SignBtn">Sign In</button>
-          <button id="RegisterBtn">Register</button>
-        </div>
-      </nav>
-    </header>
-
-    <section class="Ecommerce-HomePic">
-      <div class="overlay">
-        <h1>Welcome to the Future of Shopping</h1>
-        <p>Discover amazing products at unbeatable prices</p>
-        <a href="#ProductsSection" class="shop-now-btn">Shop Now</a>
+        <a href="index.html" class="logo-text">Ecommerce</a>
       </div>
-    </section>
 
-    <!-- Products Section with Aside Filters -->
-    <section id="ProductsSection" class="products-section">
-      <div class="container">
-        <div class="products-header">
-          <h2>Our Products</h2>
-          <div class="filter-toggle">
-            <button id="filterToggleBtn">
-              <span>Filters</span>
-              <svg
-                class="filter-icon"
-                xmlns="http://www.w3.org/2000/svg"
-                width="18"
-                height="18"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <polygon
-                  points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"
-                ></polygon>
-              </svg>
-            </button>
+      <form class="search-bar" action="#">
+        <input type="text" placeholder="Search products..." />
+      </form>
+
+      <div class="auth-buttons">
+        <button id="SignBtn">Sign In</button>
+        <button id="RegisterBtn">Register</button>
+      </div>
+    </nav>
+  </header>
+
+  <section class="Ecommerce-HomePic">
+    <div class="overlay">
+      <h1>Welcome to the Future of Shopping</h1>
+      <p>Discover amazing products at unbeatable prices</p>
+      <a href="#ProductsSection" class="shop-now-btn">Shop Now</a>
+    </div>
+  </section>
+
+  <!-- Products Section with Aside Filters -->
+  <section id="ProductsSection" class="products-section">
+    <div class="container">
+      <div class="products-header">
+        <h2>Our Products</h2>
+        <div class="filter-toggle">
+          <button id="filterToggleBtn">
+            <span>Filters</span>
+            <svg class="filter-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="products-layout">
+        <!-- Filters as Aside -->
+        <aside class="filters-aside" id="FiltersAside">
+          <div class="filters-panel">
+            <div class="filter-group">
+              <h3>Categories</h3>
+              <div class="filter-options">
+                <label class="filter-option">
+                  <input type="checkbox" name="category" value="all" checked />
+                  <span class="checkmark"></span>
+                  All
+                </label>
+                <label class="filter-option">
+                  <input type="checkbox" name="category" value="electronics" />
+                  <span class="checkmark"></span>
+                  Electronics
+                </label>
+                <label class="filter-option">
+                  <input type="checkbox" name="category" value="clothing" />
+                  <span class="checkmark"></span>
+                  Clothing
+                </label>
+                <label class="filter-option">
+                  <input type="checkbox" name="category" value="home" />
+                  <span class="checkmark"></span>
+                  Home & Kitchen
+                </label>
+                <label class="filter-option">
+                  <input type="checkbox" name="category" value="beauty" />
+                  <span class="checkmark"></span>
+                  Beauty
+                </label>
+              </div>
+            </div>
+
+        </aside>
+
+        <!-- Main Products Content -->
+        <main class="products-main">
+          <div class="active-filters">
+            <div class="active-filter-tags">
+              <!-- Active filters will be added here dynamically -->
+            </div>
           </div>
-        </div>
 
-        <div class="products-layout">
-          <!-- Filters as Aside -->
-          <aside class="filters-aside" id="FiltersAside">
-            <div class="filters-panel">
-              <div class="filter-group">
-                <h3>Categories</h3>
-                <div class="filter-options">
-                  <label class="filter-option">
-                    <input
-                      type="checkbox"
-                      name="category"
-                      value="all"
-                      checked
-                    />
-                    <span class="checkmark"></span>
-                    All
-                  </label>
-                  <label class="filter-option">
-                    <input
-                      type="checkbox"
-                      name="category"
-                      value="electronics"
-                    />
-                    <span class="checkmark"></span>
-                    Electronics
-                  </label>
-                  <label class="filter-option">
-                    <input type="checkbox" name="category" value="clothing" />
-                    <span class="checkmark"></span>
-                    Clothing
-                  </label>
-                  <label class="filter-option">
-                    <input type="checkbox" name="category" value="home" />
-                    <span class="checkmark"></span>
-                    Home & Kitchen
-                  </label>
-                  <label class="filter-option">
-                    <input type="checkbox" name="category" value="beauty" />
-                    <span class="checkmark"></span>
-                    Beauty
-                  </label>
-                </div>
-              </div>
+          <div id="Products" class="products-grid">
+            <!-- Products will be loaded here by JavaScript -->
+          </div>
+          <div class="pagination-controls">
+            <button id="prevPage" class="pagination-button" disabled>Previous</button>
+            <div id="pageNumbers" class="page-numbers"></div>
+            <button id="nextPage" class="pagination-button">Next</button>
+          </div>
 
-              <div class="filter-group">
-                <h3>Price Range</h3>
-                <div class="price-slider">
-                  <div class="price-inputs">
-                    <div class="price-input">
-                      <span>Min</span>
-                      <input
-                        type="number"
-                        id="min-price"
-                        value="0"
-                        min="0"
-                        max="1000"
-                      />
-                    </div>
-                    <div class="price-input">
-                      <span>Max</span>
-                      <input
-                        type="number"
-                        id="max-price"
-                        value="1000"
-                        min="0"
-                        max="1000"
-                      />
-                    </div>
-                  </div>
-                  <div class="slider-container">
-                    <div class="slider-track"></div>
-                    <input
-                      type="range"
-                      id="price-min"
-                      min="0"
-                      max="1000"
-                      value="0"
-                      step="10"
-                    />
-                    <input
-                      type="range"
-                      id="price-max"
-                      min="0"
-                      max="1000"
-                      value="1000"
-                      step="10"
-                    />
-                  </div>
-                </div>
-              </div>
-
-              <div class="filter-group">
-                <h3>Rating</h3>
-                <div class="rating-options">
-                  <label class="rating-option">
-                    <input type="radio" name="rating" value="all" checked />
-                    <span>All Ratings</span>
-                  </label>
-                  <label class="rating-option">
-                    <input type="radio" name="rating" value="4" />
-                    <span>
-                      <div class="stars">
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star empty">★</span>
-                      </div>
-                      <span>& Up</span>
-                    </span>
-                  </label>
-                  <label class="rating-option">
-                    <input type="radio" name="rating" value="3" />
-                    <span>
-                      <div class="stars">
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star empty">★</span>
-                        <span class="star empty">★</span>
-                      </div>
-                      <span>& Up</span>
-                    </span>
-                  </label>
-                </div>
-              </div>
-
-              <div class="filter-group">
-                <h3>Sort By</h3>
-                <select id="sort-select" class="sort-select">
-                  <option value="featured">Featured</option>
-                  <option value="price-low">Price: Low to High</option>
-                  <option value="price-high">Price: High to Low</option>
-                  <option value="rating">Highest Rated</option>
-                  <option value="newest">Newest Arrivals</option>
-                </select>
-              </div>
-
-              <div class="filter-actions">
-                <button id="apply-filters" class="apply-filters-btn">
-                  Apply Filters
-                </button>
-                <button id="clear-filters" class="clear-filters-btn">
-                  Clear All
-                </button>
-              </div>
-
-              <div class="filters-close-mobile">
-                <button id="closeFiltersBtn">Close Filters</button>
-              </div>
-            </div>
-          </aside>
-
-          <!-- Main Products Content -->
-          <main class="products-main">
-            <div class="active-filters">
-              <div class="active-filter-tags">
-                <!-- Active filters will be added here dynamically -->
-              </div>
-            </div>
-
-            <div id="Products" class="products-grid">
-              <!-- Products will be loaded here by JavaScript -->
-            </div>
-
-            <div class="pagination">
-              <button class="pagination-button" data-page="prev">&lt;</button>
-              <button class="pagination-button active" data-page="1">1</button>
-              <button class="pagination-button" data-page="2">2</button>
-              <button class="pagination-button" data-page="3">3</button>
-              <button class="pagination-button" data-page="next">&gt;</button>
-            </div>
-          </main>
-        </div>
+        </main>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <script src="G_ProductsLoad/ProductsLoad.js"></script>
-    <script src="/General_Logics/CheckUser.js"></script>
-    <script src="/Scripts/main.js"></script>
-    <script src="Customer/Search.js"></script>
-    <!-- New script for filters -->
-    <script src="/Scripts/filters.js"></script>
-    <script src="/Customer/Add_To_Cart.js"></script>
-  </body>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="/General_Logics/CheckUser.js"></script>
+  <script src="/Scripts/main.js"></script>
+  <script src="Customer/Search.js"></script>
+  <script src="/Customer/add-to-cart-btn.js"></script>
+  <script src="G_ProductsLoad/ProductsLoad.js"></script>
+</body>
+
 </html>

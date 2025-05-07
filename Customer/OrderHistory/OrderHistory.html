@@ -24,13 +24,9 @@
                 <span id="CustomerName">Order History</span>
                 <button id="signOutBtn" class="signout-button">Sign Out</button>
                 <div class="profile-menu">
-                    <button id="profileBtn" class="profile-button">
-                        Profile Options
+                    <button id="backButton" class="profile-button">
+                        Back
                     </button>
-                    <div class="profile-dropdown">
-                        <a href="../OrderHistory/OrderHistory.html">Order History</a>
-                        <a href="../AccountManegment/UpdateProfile.html">Update Profile</a>
-                    </div>
                 </div>
             </div>
         </nav>
@@ -46,6 +42,19 @@
     <script src="../SignOut_Logic/SignOut.js"></script>
     <script src="../General_Logics/CheckUser.js"></script>
     <script src="./OrderHistory.js"></script>
+
+    <!-- Add this script for the back button functionality -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const backButton = document.getElementById('backButton');
+
+            backButton.addEventListener('click', function () {
+                window.history.back();
+
+
+            });
+        });
+    </script>
 </body>
 
 </html>
