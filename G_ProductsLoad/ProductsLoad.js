@@ -10,19 +10,36 @@ document.addEventListener("DOMContentLoaded", function () {
   const nextButton = document.getElementById("nextPage");
   const pageNumbersContainer = document.getElementById("pageNumbers");
 
-  // --- Add to Cart Setup ---
   function setupAddToCartButtons() {
     const buttons = document.querySelectorAll(".add-to-cart-btn");
     buttons.forEach((button) => {
+      if (button.dataset.listenerAttached === "true") return;
+      button.dataset.listenerAttached = "true";
+
       button.addEventListener("click", async function () {
+        if (button.dataset.isProcessing === "true") return;
+        button.dataset.isProcessing = "true";
+
         const productCard = this.closest(".product-card");
-        if (!productCard) return console.error("No product card found.");
+        if (!productCard) {
+          console.error("No product card found.");
+          button.dataset.isProcessing = "false";
+          return;
+        }
 
         const productId = productCard.dataset.productId;
-        if (!productId) return console.error("Missing productId on product card");
+        if (!productId) {
+          console.error("Missing productId on product card");
+          button.dataset.isProcessing = "false";
+          return;
+        }
 
         const userStr = localStorage.getItem("loggedInUser");
-        if (!userStr) return swal("Please log in first!", "", "warning");
+        if (!userStr) {
+          swal("Please log in first!", "", "warning");
+          button.dataset.isProcessing = "false";
+          return;
+        }
 
         const user = JSON.parse(userStr);
         const customerId = user.id;
@@ -78,6 +95,8 @@ document.addEventListener("DOMContentLoaded", function () {
         } catch (err) {
           console.error("Error handling cart:", err);
         }
+
+        button.dataset.isProcessing = "false";
       });
     });
   }
@@ -94,7 +113,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 1200);
   }
 
-  // --- Fetch Products ---
   function fetchProducts() {
     fetch("http://localhost:5000/Products?isPending=false")
       .then(res => res.json())
@@ -110,7 +128,6 @@ document.addEventListener("DOMContentLoaded", function () {
       });
   }
 
-  // --- Render Products with Pagination ---
   function renderProducts(products) {
     if (!container) {
       console.error("Container not found!");
@@ -155,10 +172,9 @@ document.addEventListener("DOMContentLoaded", function () {
       container.appendChild(card);
     });
 
-    setupAddToCartButtons(); // Reattach listeners
+    setupAddToCartButtons(); // Only binds if not already attached
   }
 
-  // --- Setup Pagination ---
   function setupPagination(products) {
     const totalPages = Math.ceil(products.length / itemsPerPage);
     pageNumbersContainer.innerHTML = "";
@@ -198,7 +214,6 @@ document.addEventListener("DOMContentLoaded", function () {
     };
   }
 
-  // --- Category Filtering ---
   function setupEventListeners() {
     categoryCheckboxes.forEach((checkbox) => {
       checkbox.addEventListener("change", function () {
@@ -222,13 +237,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // --- Observe Product Container for Dynamically Loaded Elements ---
-  if (container) {
-    const observer = new MutationObserver(setupAddToCartButtons);
-    observer.observe(container, { childList: true, subtree: true });
-  }
-
-  // --- Init ---
   function init() {
     fetchProducts();
     setupEventListeners();
