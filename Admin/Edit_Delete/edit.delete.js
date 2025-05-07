@@ -47,18 +47,8 @@ document.addEventListener("DOMContentLoaded", function () {
       const productId = e.target.dataset.id;
   
       if (e.target.classList.contains("edit-button")) {
-        const newName = prompt("New product name:");
-        const newPrice = prompt("New price:");
-        const newDesc = prompt("New description:");
-  
-        if (newName && newPrice && newDesc) {
-          await editProduct(productId, {
-            name: newName,
-            price: newPrice,
-            description: newDesc
-          });
-          renderProducts();
-        }
+        const productId = e.target.dataset.id;
+        window.location.href = `EditProduct.html?id=${productId}`;
       }
   
       if (e.target.classList.contains("delete-button")) {

@@ -19,29 +19,33 @@ registerButton.addEventListener("click", function () {
   window.location.href = "/RegisterPg/Register.html";
 });
 
-const addToCartBtns = document.querySelectorAll(".add-to-cart-btn");
+window.addEventListener("load", () => {
+  // نستنّى شوية لحد ما الكروت تتعرض
+  setTimeout(() => {
+    const addToCartBtns = document.querySelectorAll(".add-to-cart-btn");
 
-addToCartBtns.forEach((btn) => {
-  btn.addEventListener("click", () => {
-    const user = JSON.parse(localStorage.getItem("loggedInUser"));
+    addToCartBtns.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const user = JSON.parse(localStorage.getItem("loggedInUser"));
 
-    if (!user) {
-      swal({
-        title: "Oops!",
-        text: "You need to login to add items to cart.",
-        icon: "warning", // "success", "error", "info", "warning"
-        button: "OK",
+        if (!user) {
+          swal({
+            title: "Oops!",
+            text: "You need to login to add items to cart.",
+            icon: "warning",
+            button: "OK",
+          });
+        } else {
+          swal({
+            title: "Good!",
+            text: "Product Added Successfully",
+            icon: "success",
+            button: "OK",
+          });
+        }
       });
-    } else {
-      // كود الإضافة للعربية هنا
-      swal({
-        title: "Good!",
-        text: "Product Added Succefully",
-        icon: "warning", // "success", "error", "info", "warning"
-        button: "OK",
-      });
-    }
-  });
+    });
+  }, 500);
 });
 
 // window.addEventListener("load", function () {

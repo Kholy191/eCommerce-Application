@@ -11,27 +11,68 @@ form.addEventListener("submit", function (e) {
   const address = document.getElementById("address").value.trim();
   const userType = document.querySelector('input[name="userType"]:checked');
 
-  if (
-    !fullName ||
-    !username ||
-    !email ||
-    !password ||
-    !phone ||
-    !address ||
-    !userType
-  ) {
-    swal("Missing Info", "Please fill in all fields.", "warning");
-    return;
+  let isValid = true;
+
+  // Reset errors
+  document
+    .querySelectorAll(".error-message")
+    .forEach((el) => el.classList.remove("show"));
+
+  // Full name: only letters and spaces
+  if (!/^[A-Za-z\s]+$/.test(fullName)) {
+    document.getElementById("name-error").classList.add("show");
+    isValid = false;
   }
+
+  // Username: at least 3 characters
+  if (username.length < 3) {
+    document.getElementById("username-error").classList.add("show");
+    isValid = false;
+  }
+
+  // Email format
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(email)) {
+    document.getElementById("email-error").classList.add("show");
+    isValid = false;
+  }
+
+  // Password strength: at least 8 characters, with upper, lower, digit
+  const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/;
+  if (!passwordRegex.test(password)) {
+    document.getElementById("password-error").classList.add("show");
+    isValid = false;
+  }
+
+  // Phone: digits only, 10-15
+  if (!/^\d{10,15}$/.test(phone)) {
+    document.getElementById("phone-error").classList.add("show");
+    isValid = false;
+  }
+
+  // Address: not empty
+  if (address.length < 3) {
+    document.getElementById("address-error").classList.add("show");
+    isValid = false;
+  }
+
+  // User type
+  if (!userType) {
+    document.getElementById("userType-error").classList.add("show");
+    isValid = false;
+  }
+
+  if (!isValid) return;
 
   // Check if email already exists
   fetch(`http://localhost:5000/Users?Email=${email}`)
     .then((res) => res.json())
     .then((existingUsers) => {
       if (existingUsers.length > 0) {
-        swal("احا!", "الإيميل ده مستخدم قبل كده يا نجم!", "error");
+        swal("Oops!", "This email already exists.", "warning");
         return;
       }
+      const today = new Date();
 
       const newUser = {
         id: crypto.randomUUID(),
@@ -42,28 +83,20 @@ form.addEventListener("submit", function (e) {
         Phone: phone,
         Address: address,
         Type: userType.value,
+        Date: today.toDateString(),
       };
 
-      // Send the new user to the server
       fetch("http://localhost:5000/Users", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(newUser),
       })
         .then((res) => {
           if (!res.ok) throw new Error("Registration failed.");
           return res.json();
         })
-        .then((data) => {
-          e.preventDefault();
-          swal({
-            title: "Done!",
-            text: "Account Created.",
-            icon: "warning", // "success"
-            button: "OK",
-          });
+        .then(() => {
+          window.location.href = "/SignIn/Signin.html";
         })
         .catch((err) => {
           console.error(err);
