@@ -129,7 +129,7 @@ window.addEventListener("load", function () {
 
       // Join Date (if not available, set it manually or leave empty)
       let dateTd = document.createElement("td");
-      dateTd.innerText = user.JoinDate || "N/A"; // Replace "N/A" with actual value if available
+      dateTd.innerText = user.Date || "N/A"; // Replace "N/A" with actual value if available
       createdTr.appendChild(dateTd);
 
       // Actions (delete button)

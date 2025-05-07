@@ -8,7 +8,19 @@
       "Phone": "01069423530",
       "Address": "No Address",
       "Type": "Admin",
-      "id": "fdee"
+      "id": "70bd5f9b-81fb-4356-4040-dRW91d7c40fc",
+      "Date": "Thu May 05 2025"
+    },
+    {
+      "Email": "a.oMar@gmail.com",
+      "Password": "12345678",
+      "FullName": "Alaa Omar",
+      "UserName": "Admin",
+      "Phone": "01069423530",
+      "Address": "No Address",
+      "Type": "Admin",
+      "id": "70bd5f9b-81fb-4356-8303-dRW91d7c40fc",
+      "Date": "Thu May 05 2025"
     },
     {
       "Email": "mariem@gmail.com",
@@ -18,7 +30,8 @@
       "UserName": "Mariem",
       "Phone": "01069423530",
       "Address": "9 - sayed zaidan st",
-      "Type": "Seller"
+      "Type": "Seller",
+      "Date": "Thu May 03 2025"
     },
     {
       "id": "b7c4d147-679f-4145-a4f9-365a2c28c341",
@@ -28,7 +41,8 @@
       "Password": "12345678",
       "Phone": "01069423530",
       "Address": "9 - sayed zaidan st",
-      "Type": "Customer"
+      "Type": "Customer",
+      "Date": "Thu May 04 2025"
     },
     {
       "id": "b8328daf-4314-43d2-9f04-0b5040e2d08c",
@@ -38,7 +52,19 @@
       "Password": "12345678",
       "Phone": "01069423530",
       "Address": "9 - sayed zaidan st",
-      "Type": "Customer"
+      "Type": "Customer",
+      "Date": "Thu May 06 2025"
+    },
+    {
+      "id": "873a1da9-20f8-43f2-914c-a817186db946",
+      "FullName": "Omar Ahmed",
+      "UserName": "Omar123r4",
+      "Email": "Omar@gmail.com",
+      "Password": "Ahmed_1234",
+      "Phone": "01069423530",
+      "Address": "9 - sayed zaidan st",
+      "Type": "Seller",
+      "Date": "Thu May 08 2025"
     }
   ],
   "Products": [

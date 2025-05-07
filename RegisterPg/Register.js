@@ -72,6 +72,7 @@ form.addEventListener("submit", function (e) {
         swal("Oops!", "This email already exists.", "warning");
         return;
       }
+      const today = new Date();
 
       const newUser = {
         id: crypto.randomUUID(),
@@ -82,6 +83,7 @@ form.addEventListener("submit", function (e) {
         Phone: phone,
         Address: address,
         Type: userType.value,
+        Date: today.toDateString(),
       };
 
       fetch("http://localhost:5000/Users", {
