@@ -145,9 +145,9 @@
           </div>
 
           <div class="pagination-controls">
-            <button id="prevPage" class="pagination-button" disabled>Previous</button>
+            <button id="prevPage" class="pagination-button" disabled><</button>
             <div id="pageNumbers" class="page-numbers"></div>
-            <button id="nextPage" class="pagination-button">Next</button>
+            <button id="nextPage" class="pagination-button">></button>
           </div>
         </main>
       </div>
@@ -182,7 +182,7 @@
 
       if (customerNameElement) {
         if (loggedInUser && loggedInUser.UserName) {
-          customerNameElement.textContent = `Welcome, ${loggedInUser.UserName}`;
+          customerNameElement.textContent = `Welcome, ${loggedInUser.FullName}`;
         } else {
           customerNameElement.textContent = 'Welcome, Guest';
 
