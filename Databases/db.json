@@ -87,52 +87,5 @@
     }
   ],
   "Cart": [
-    {
-      "id": "6522b228-2d82-42ff-9793-76210a904e53",
-      "customerId": "5a279954-c9c4-403c-9405-8f8c64f6dcfd",
-      "orders": [
-        {
-          "id": "bec438ab-c6ae-4f84-abde-b5ed528ce997",
-          "productId": "28d274f1-1b65-4c1c-84df-70f8fba385b4",
-          "quantity": 3,
-          "status": "Drafted"
-        },
-        {
-          "id": "2eaac84e-2f31-495e-bf31-698a9a48f4fb",
-          "productId": "ec7772e1-2482-4376-8d65-3bb46e6aa6f3",
-          "quantity": 2,
-          "status": "Drafted"
-        },
-        {
-          "id": "670d8593-dccc-40e9-af43-80031e23ad79",
-          "quantity": 19
-        },
-        {
-          "id": "ebda3f06-2b00-452a-88a4-c71f62706998",
-          "productId": "watches",
-          "quantity": 1
-        }
-      ]
-    },
-    {
-      "id": "67cb",
-      "customerId": "b7c4d147-679f-4145-a4f9-365a2c28c341",
-      "orders": [
-        {
-          "id": "d7d9346d-5842-49ff-b26c-7fe7fde64459",
-          "productId": "f753e125-0cd8-43d0-ae38-b9b9d30a538a",
-          "quantity": 1
-        },
-        {
-          "id": "22a5d016-aee0-433a-827a-78fb9dc220b0",
-          "productId": "6a5a9fbf-29bf-4169-9f47-96881008a5ea",
-          "quantity": 10
-        },
-        {
-          "id": "50e6feec-bdfc-429f-b78e-c8ea46bddebb",
-          "quantity": 5
-        }
-      ]
-    }
   ]
 }
