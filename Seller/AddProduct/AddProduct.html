@@ -41,6 +41,7 @@
           placeholder="https://..."
           required
         />
+        <div class="error-message" id="image-error"></div>
 
         <label>Product Name:</label>
         <input
@@ -49,6 +50,7 @@
           placeholder="Product name"
           required
         />
+        <div class="error-message" id="name-error"></div>
 
         <label>Price (EGP):</label>
         <input
@@ -58,6 +60,7 @@
           placeholder="Price in EGP"
           required
         />
+        <div class="error-message" id="price-error"></div>
 
         <label>Description:</label>
         <textarea
@@ -65,6 +68,17 @@
           placeholder="Describe the product..."
           required
         ></textarea>
+        <div class="error-message" id="description-error"></div>
+
+        <label>Category:</label>
+        <select id="productCategory" required>
+          <option value="" disabled selected>Select a category</option>
+          <option value="Electronics">Electronics</option>
+          <option value="Clothing">Clothing</option>
+          <option value="Home & Kitchen">Home & Kitchen</option>
+          <option value="Beauty">Beauty</option>
+        </select>
+        <div class="error-message" id="category-error"></div>
 
         <button type="submit" class="add-btn">Add Product</button>
       </form>

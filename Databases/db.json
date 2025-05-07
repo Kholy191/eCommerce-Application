@@ -111,6 +111,16 @@
       "isPending": false,
       "SellerId": "70bd5f9b-81fb-4356-8303-d8091d7c40fc",
       "Category": "Electronics"
+    },
+    {
+      "id": "5844eb26-b22f-4b3d-8a44-71423cff782f",
+      "image": "https://burst.shopifycdn.com/photos/wrist-watches.jpg?width=1000&format=pjpg&exif=0&iptc=0",
+      "name": "LOL",
+      "price": 2451,
+      "description": "What The Fuck",
+      "Category": "Electronics",
+      "isPending": false,
+      "SellerId": "70bd5f9b-81fb-4356-8303-d8091d7c40fc"
     }
   ],
   "Cart": [
@@ -155,7 +165,7 @@
         },
         {
           "id": "50e6feec-bdfc-429f-b78e-c8ea46bddebb",
-          "quantity": 2
+          "quantity": 5
         }
       ]
     }
