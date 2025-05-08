@@ -51,7 +51,7 @@
       "isPending": false,
       "SellerId": "70bd5f9b-81fb-4356-8303-d8091d7c40fc",
       "Category": "Accessories",
-      "quantity": 50
+      "quantity": 45
     },
     {
       "id": "ec7772e1-2482-4376-8d65-3bb46e6aa6f3",
@@ -62,7 +62,7 @@
       "isPending": false,
       "SellerId": "70bd5f9b-81fb-4356-8303-d8091d7c40fc",
       "Category": "Electronics",
-      "quantity": 94
+      "quantity": 89
     },
     {
       "id": "2907881e-0875-440d-bf86-5f1ae9374c16",
@@ -73,7 +73,7 @@
       "isPending": false,
       "SellerId": "70bd5f9b-81fb-4356-8303-d8091d7c40fc",
       "Category": "Accessories",
-      "quantity": 98
+      "quantity": 92
     },
     {
       "id": "2907881e-0875-440d-b2a4-5f1ae9374c16",
@@ -84,37 +84,37 @@
       "isPending": false,
       "SellerId": "70bd5f9b-81fb-4356-8303-d8091d7c40fc",
       "Category": "Electronics",
-      "quantity": 98
+      "quantity": 95
     }
   ],
   "Cart": [
     {
-      "id": "850c6853-1848-4430-bbad-0616f80e2238",
+      "id": "b319596e-fb5b-4cbe-9a8d-0ea20fc2127c",
       "customerId": "b7c4d147-679f-4145-a4f9-365a2c28c341",
       "orders": [
         {
-          "id": "df9e806f-8039-42e2-8f0e-b164b955fe32",
+          "id": "6f8ade11-d30d-4588-8a93-2929f52df574",
           "productId": "28d274f1-1b65-4c1c-84df-70f8fba385b4",
-          "quantity": 3,
-          "status": "Drafted"
-        },
-        {
-          "id": "86f057fe-a33a-4234-a3f1-2fe1da46a1d0",
-          "productId": "ec7772e1-2482-4376-8d65-3bb46e6aa6f3",
           "quantity": 1,
           "status": "Drafted"
         },
         {
-          "id": "0cf6d71c-fe59-409b-9c8b-c561fed86c40",
+          "id": "3f5f16b0-ae82-47aa-9100-9d0e7af7ec0d",
+          "productId": "2907881e-0875-440d-bf86-5f1ae9374c16",
+          "quantity": 2,
+          "status": "Drafted"
+        },
+        {
+          "id": "71f55b92-e5c9-48ec-bcb7-4a42e201be05",
           "productId": "2907881e-0875-440d-b2a4-5f1ae9374c16",
           "quantity": 2,
           "status": "Drafted"
         },
         {
-          "id": "3989c827-5eb7-4a32-9473-438293f4dd4e",
-          "productId": "2907881e-0875-440d-bf86-5f1ae9374c16",
+          "id": "875ae1a2-fd91-4ce7-a890-578144334ddf",
+          "productId": "ec7772e1-2482-4376-8d65-3bb46e6aa6f3",
           "quantity": 2,
-          "status": "in cart"
+          "status": "Drafted"
         }
       ]
     }
