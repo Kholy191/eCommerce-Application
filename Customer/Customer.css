@@ -125,8 +125,9 @@
     flex-direction: column;
     gap: 15px;
   }
-  
-  .search-bar, .price-filter {
+
+  .search-bar,
+  .price-filter {
     width: 100%;
     min-width: auto;
   }
@@ -191,7 +192,7 @@
   top: 100%;
   background-color: white;
   min-width: 200px;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   overflow: hidden;
   z-index: 1000;
@@ -338,7 +339,7 @@
   right: 0;
   background-color: white;
   min-width: 200px;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   overflow: hidden;
   z-index: 1000;
@@ -365,6 +366,12 @@
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-10px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

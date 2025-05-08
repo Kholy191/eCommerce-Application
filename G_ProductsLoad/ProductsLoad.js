@@ -5,55 +5,82 @@ document.addEventListener("DOMContentLoaded", function () {
   let currentPage = 1;
 
   const container = document.getElementById("Products");
-  const categoryCheckboxes = document.querySelectorAll('input[name="category"]');
+  const categoryCheckboxes = document.querySelectorAll(
+    'input[name="category"]'
+  );
   const prevButton = document.getElementById("prevPage");
   const nextButton = document.getElementById("nextPage");
   const pageNumbersContainer = document.getElementById("pageNumbers");
 
-  // --- Add to Cart Setup ---
   function setupAddToCartButtons() {
     const buttons = document.querySelectorAll(".add-to-cart-btn");
     buttons.forEach((button) => {
+      if (button.dataset.listenerAttached === "true") return;
+      button.dataset.listenerAttached = "true";
+
       button.addEventListener("click", async function () {
+        if (button.dataset.isProcessing === "true") return;
+        button.dataset.isProcessing = "true";
+
         const productCard = this.closest(".product-card");
-        if (!productCard) return console.error("No product card found.");
+        if (!productCard) {
+          console.error("No product card found.");
+          button.dataset.isProcessing = "false";
+          return;
+        }
 
         const productId = productCard.dataset.productId;
-        if (!productId) return console.error("Missing productId on product card");
+        if (!productId) {
+          console.error("Missing productId on product card");
+          button.dataset.isProcessing = "false";
+          return;
+        }
 
         const userStr = localStorage.getItem("loggedInUser");
-        if (!userStr) return swal("Please log in first!", "", "warning");
+        if (!userStr) {
+          swal("Please log in first!", "", "warning");
+          button.dataset.isProcessing = "false";
+          return;
+        }
 
         const user = JSON.parse(userStr);
         const customerId = user.id;
 
         try {
-          const res = await fetch(`http://localhost:5000/Cart?customerId=${customerId}`);
+          const res = await fetch(
+            `http://localhost:5000/Cart?customerId=${customerId}`
+          );
           const existingCarts = await res.json();
 
-          let customerCart = existingCarts.find(cart => cart.customerId === customerId);
+          let customerCart = existingCarts.find(
+            (cart) => cart.customerId === customerId
+          );
 
           if (!customerCart) {
             const newCart = {
               id: crypto.randomUUID(),
               customerId,
-              orders: [{
-                id: crypto.randomUUID(),
-                productId,
-                quantity: 1,
-                status: "in cart"
-              }]
+              orders: [
+                {
+                  id: crypto.randomUUID(),
+                  productId,
+                  quantity: 1,
+                  status: "in cart",
+                },
+              ],
             };
 
             await fetch("http://localhost:5000/Cart", {
               method: "POST",
               headers: { "Content-Type": "application/json" },
-              body: JSON.stringify(newCart)
+              body: JSON.stringify(newCart),
             });
 
             console.log("New cart created.");
           } else {
-            const existingOrder = customerCart.orders.find(o => o.productId === productId);
+            const existingOrder = customerCart.orders.find(
+              (o) => o.productId === productId
+            );
             if (existingOrder) {
               existingOrder.quantity += 1;
             } else {
@@ -61,14 +88,14 @@ document.addEventListener("DOMContentLoaded", function () {
                 id: crypto.randomUUID(),
                 productId,
                 quantity: 1,
-                status: "in cart"
+                status: "in cart",
               });
             }
 
             await fetch(`http://localhost:5000/Cart/${customerCart.id}`, {
               method: "PUT",
               headers: { "Content-Type": "application/json" },
-              body: JSON.stringify(customerCart)
+              body: JSON.stringify(customerCart),
             });
 
             console.log("Cart updated.");
@@ -78,6 +105,8 @@ document.addEventListener("DOMContentLoaded", function () {
         } catch (err) {
           console.error("Error handling cart:", err);
         }
+
+        button.dataset.isProcessing = "false";
       });
     });
   }
@@ -94,23 +123,21 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 1200);
   }
 
-  // --- Fetch Products ---
   function fetchProducts() {
     fetch("http://localhost:5000/Products?isPending=false")
-      .then(res => res.json())
-      .then(data => {
+      .then((res) => res.json())
+      .then((data) => {
         productsArray = data || [];
         filteredArray = productsArray;
         currentPage = 1;
         renderProducts(filteredArray);
         setupPagination(filteredArray);
       })
-      .catch(err => {
+      .catch((err) => {
         console.error("Error fetching products:", err);
       });
   }
 
-  // --- Render Products with Pagination ---
   function renderProducts(products) {
     if (!container) {
       console.error("Container not found!");
@@ -120,7 +147,8 @@ document.addEventListener("DOMContentLoaded", function () {
     container.innerHTML = "";
 
     if (products.length === 0) {
-      container.innerHTML = "<p class='no-products'>No products found in this category.</p>";
+      container.innerHTML =
+        "<p class='no-products'>No products found in this category.</p>";
       return;
     }
 
@@ -155,10 +183,9 @@ document.addEventListener("DOMContentLoaded", function () {
       container.appendChild(card);
     });
 
-    setupAddToCartButtons(); // Reattach listeners
+    setupAddToCartButtons(); // Only binds if not already attached
   }
 
-  // --- Setup Pagination ---
   function setupPagination(products) {
     const totalPages = Math.ceil(products.length / itemsPerPage);
     pageNumbersContainer.innerHTML = "";
@@ -198,7 +225,6 @@ document.addEventListener("DOMContentLoaded", function () {
     };
   }
 
-  // --- Category Filtering ---
   function setupEventListeners() {
     categoryCheckboxes.forEach((checkbox) => {
       checkbox.addEventListener("change", function () {
@@ -206,12 +232,15 @@ document.addEventListener("DOMContentLoaded", function () {
           if (cb !== this) cb.checked = false;
         });
 
-        const selected = Array.from(categoryCheckboxes).find(cb => cb.checked);
+        const selected = Array.from(categoryCheckboxes).find(
+          (cb) => cb.checked
+        );
         if (!selected || selected.value === "all") {
           filteredArray = productsArray;
         } else {
           filteredArray = productsArray.filter(
-            (product) => product.Category.toLowerCase() === selected.value.toLowerCase()
+            (product) =>
+              product.Category.toLowerCase() === selected.value.toLowerCase()
           );
         }
 
@@ -222,13 +251,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // --- Observe Product Container for Dynamically Loaded Elements ---
-  if (container) {
-    const observer = new MutationObserver(setupAddToCartButtons);
-    observer.observe(container, { childList: true, subtree: true });
-  }
-
-  // --- Init ---
   function init() {
     fetchProducts();
     setupEventListeners();
