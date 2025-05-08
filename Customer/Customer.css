@@ -77,7 +77,7 @@
 #priceRange {
   flex: 1;
   height: 6px;
-  -webkit-appearance: none;
+
   background: #dee2e6;
   border-radius: 3px;
   outline: none;
