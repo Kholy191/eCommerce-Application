@@ -5,11 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Order History</title>
     <link rel="stylesheet" href="./OrderHistory.css" />
-    <link
-      rel="icon"
-      type="image/png"
-      href="https://icons.iconarchive.com/icons/jozef89/services-flat/512/ecommerce-icon.png"
-    />
+    <link rel="icon" type="image/png" href="https://icons.iconarchive.com/icons/jozef89/services-flat/512/ecommerce-icon.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
   </head>
 
   <body>
@@ -37,16 +34,13 @@
 
     <main class="order-history-container">
       <h1>Your Order History</h1>
-      <div id="orderHistoryList" class="order-list">
-        <!-- Orders will be inserted here by JavaScript -->
-      </div>
+      <div id="orderHistoryList" class="order-list"></div>
     </main>
 
     <script src="../SignOut_Logic/SignOut.js"></script>
     <script src="../General_Logics/CheckUser.js"></script>
     <script src="./OrderHistory.js"></script>
 
-    <!-- Add this script for the back button functionality -->
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         const backButton = document.getElementById("backButton");
@@ -71,6 +65,5 @@
         }
       });
     </script>
-    <script src="../../SignOut_Logic/SignOut.js"></script>
   </body>
 </html>

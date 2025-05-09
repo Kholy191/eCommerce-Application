@@ -1,44 +1,72 @@
 document.addEventListener('DOMContentLoaded', function() {
     const ordersContainer = document.getElementById('orders-container');
-    let allCarts = []; // Store all carts data
+    let allCarts = [];
+    let allProducts = [];
+    let allCustomers = [];
 
-    async function loadDraftedOrders() {
+    async function loadData() {
         try {
-            const response = await fetch('http://localhost:5000/Cart');
-            allCarts = await response.json();
+            // Load all necessary data
+            const [cartsResponse, productsResponse, customersResponse] = await Promise.all([
+                fetch('http://localhost:5000/Cart'),
+                fetch('http://localhost:5000/Products'),
+                fetch('http://localhost:5000/Users')
+            ]);
             
-            ordersContainer.innerHTML = '';
+            allCarts = await cartsResponse.json();
+            allProducts = await productsResponse.json();
+            allCustomers = await customersResponse.json();
             
-            let hasDraftedOrders = false;
-            
-            allCarts.forEach(cart => {
-                cart.orders.forEach(order => {
-                    if (order.status === 'drafted') {
-                        hasDraftedOrders = true;
-                        displayOrder(order, cart.id, cart.customerId);
-                    }
-                });
-            });
-            
-            if (!hasDraftedOrders) {
-                ordersContainer.innerHTML = '<div class="no-orders">No drafted orders found</div>';
-            }
-            
+            loadDraftedOrders();
         } catch (error) {
-            ordersContainer.innerHTML = '<div class="no-orders">Error loading orders</div>';
+            ordersContainer.innerHTML = '<div class="no-orders">Error loading data</div>';
             console.error(error);
         }
     }
 
-    function displayOrder(order, cartId, customerId) {
+    function loadDraftedOrders() {
+        ordersContainer.innerHTML = '';
+        
+        let hasDraftedOrders = false;
+        
+        allCarts.forEach(cart => {
+            // Filter only drafted orders for this cart
+            const draftedOrders = cart.orders.filter(order => 
+                order.status && order.status.toLowerCase() === 'drafted'
+            );
+            
+            if (draftedOrders.length > 0) {
+                hasDraftedOrders = true;
+                
+                // Find customer info
+                const customer = allCustomers.find(c => c.id === cart.customerId);
+                
+                // Display each drafted order
+                draftedOrders.forEach(order => {
+                    const product = allProducts.find(p => p.id === order.productId);
+                    if (product) {
+                        displayOrder(order, cart.id, customer, product);
+                    }
+                });
+            }
+        });
+        
+        if (!hasDraftedOrders) {
+            ordersContainer.innerHTML = '<div class="no-orders">No drafted orders found</div>';
+        }
+    }
+
+    function displayOrder(order, cartId, customer, product) {
         const orderDiv = document.createElement('div');
         orderDiv.className = 'order';
         orderDiv.innerHTML = `
             <div class="product-info">
+                <img src="${product.image}" alt="${product.name}" class="product-image">
                 <div class="product-details">
-                    <div class="product-name">Product ID: ${order.productId}</div>
+                    <div class="product-name">${product.name}</div>
+                    <div>Price: $${parseFloat(product.price).toFixed(2)}</div>
                     <div>Quantity: ${order.quantity}</div>
-                    <div>Customer ID: ${customerId}</div>
+                    <div>Customer: ${customer ? customer.UserName : 'Unknown'}</div>
                 </div>
             </div>
             <button class="btn-delete" data-cart-id="${cartId}" data-order-id="${order.id}">
@@ -50,14 +78,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
     async function deleteOrder(cartId, orderId) {
         try {
-            // Find the cart in our stored data
+            // Find the cart
             const cart = allCarts.find(c => c.id === cartId);
             if (!cart) throw new Error('Cart not found');
             
-            // Filter out the deleted order
+            // Remove the order
             cart.orders = cart.orders.filter(order => order.id !== orderId);
             
-            // Update the cart on the server
+            // Update the cart
             const response = await fetch(`http://localhost:5000/Cart/${cartId}`, {
                 method: 'PUT',
                 headers: { 'Content-Type': 'application/json' },
@@ -66,8 +94,8 @@ document.addEventListener('DOMContentLoaded', function() {
             
             if (!response.ok) throw new Error('Failed to update cart');
             
-            // Reload the orders
-            loadDraftedOrders();
+            // Reload the data
+            await loadData();
             
         } catch (error) {
             console.error('Delete error:', error);
@@ -76,7 +104,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Handle delete button clicks
-    document.addEventListener('click', function(e) {
+    ordersContainer.addEventListener('click', function(e) {
         if (e.target.classList.contains('btn-delete')) {
             if (confirm('Are you sure you want to delete this order?')) {
                 const cartId = e.target.getAttribute('data-cart-id');
@@ -86,6 +114,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Load orders when page loads
-    loadDraftedOrders();
+    // Initialize
+    loadData();
 });
