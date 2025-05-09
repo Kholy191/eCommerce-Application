@@ -51,7 +51,8 @@
       "isPending": false,
       "SellerId": "70bd5f9b-81fb-4356-8303-d8091d7c40fc",
       "Category": "Accessories",
-      "quantity": 1
+      "quantity": 50,
+      "Quantity": "NaN"
     },
     {
       "id": "ec7772e1-2482-4376-8d65-3bb46e6aa6f3",
@@ -62,7 +63,8 @@
       "isPending": false,
       "SellerId": "70bd5f9b-81fb-4356-8303-d8091d7c40fc",
       "Category": "Electronics",
-      "quantity": 98
+      "quantity": 98,
+      "Quantity": "NaN"
     },
     {
       "id": "2907881e-0875-440d-bf86-5f1ae9374c16",
@@ -73,7 +75,8 @@
       "isPending": false,
       "SellerId": "70bd5f9b-81fb-4356-8303-d8091d7c40fc",
       "Category": "Accessories",
-      "quantity": 100
+      "quantity": 50,
+      "Quantity": "NaN"
     },
     {
       "id": "2907881e-0875-440d-b2a4-5f1ae9374c16",
@@ -84,19 +87,32 @@
       "isPending": false,
       "SellerId": "70bd5f9b-81fb-4356-8303-d8091d7c40fc",
       "Category": "Electronics",
-      "quantity": 100
+      "quantity": 98,
+      "Quantity": "NaN"
     }
   ],
   "Cart": [
     {
-      "id": "ede49f36-5dc0-4dbb-a4a9-5a0024ea8d3f",
+      "id": "d48252c3-3f90-4128-89d1-8dead9907b1b",
       "customerId": "b7c4d147-679f-4145-a4f9-365a2c28c341",
       "orders": [
         {
-          "id": "e7bd8de8-6f77-4be0-9ca5-bc757551dffa",
+          "id": "51af8e82-f002-4ffb-83f8-33c573e6495a",
           "productId": "ec7772e1-2482-4376-8d65-3bb46e6aa6f3",
           "quantity": 1,
-          "status": "Drafted"
+          "status": "drafted"
+        },
+        {
+          "id": "4459bba2-ee4c-407d-83b3-025f78eadd39",
+          "productId": "28d274f1-1b65-4c1c-84df-70f8fba385b4",
+          "quantity": 2,
+          "status": "in cart"
+        },
+        {
+          "id": "392b019c-2b58-4740-aea8-af01042a2924",
+          "productId": "ec7772e1-2482-4376-8d65-3bb46e6aa6f3",
+          "quantity": 2,
+          "status": "in cart"
         }
       ]
     }

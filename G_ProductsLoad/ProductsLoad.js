@@ -51,6 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
           let customerCart = existingCarts.find(cart => cart.customerId === customerId);
 
           if (!customerCart) {
+            // Create new cart if doesn't exist
             const newCart = {
               id: crypto.randomUUID(),
               customerId,
@@ -70,10 +71,29 @@ document.addEventListener("DOMContentLoaded", function () {
 
             console.log("New cart created.");
           } else {
-            const existingOrder = customerCart.orders.find(o => o.productId === productId);
-            if (existingOrder) {
-              existingOrder.quantity += 1;
+            // Check if product exists in cart with status "drafted"
+            const draftedOrder = customerCart.orders.find(o => 
+              o.productId === productId && o.status === "drafted"
+            );
+
+            // Check if product exists in cart with status "in cart"
+            const inCartOrder = customerCart.orders.find(o => 
+              o.productId === productId && o.status === "in cart"
+            );
+
+            if (draftedOrder && !inCartOrder) {
+              // If product exists with status "drafted" but no "in cart" item exists
+              customerCart.orders.push({
+                id: crypto.randomUUID(),
+                productId,
+                quantity: 1,
+                status: "in cart"
+              });
+            } else if (inCartOrder) {
+              // If product exists with status "in cart", increase quantity
+              inCartOrder.quantity += 1;
             } else {
+              // Product doesn't exist in cart at all, add new item
               customerCart.orders.push({
                 id: crypto.randomUUID(),
                 productId,
@@ -82,6 +102,7 @@ document.addEventListener("DOMContentLoaded", function () {
               });
             }
 
+            // Update the cart on server
             await fetch(`http://localhost:5000/Cart/${customerCart.id}`, {
               method: "PUT",
               headers: { "Content-Type": "application/json" },
@@ -172,7 +193,7 @@ document.addEventListener("DOMContentLoaded", function () {
       container.appendChild(card);
     });
 
-    setupAddToCartButtons(); // Only binds if not already attached
+    setupAddToCartButtons();
   }
 
   function setupPagination(products) {
