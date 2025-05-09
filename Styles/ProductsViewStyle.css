@@ -720,3 +720,85 @@
     max-width: none;
   }
 }
+
+/* Rating styles - Updated */
+.rating-container {
+  margin: 10px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.product-rating {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+}
+
+.product-rating i {
+  color: #f39c12; /* Match with your star color in other sections */
+  font-size: 16px;
+}
+
+.product-rating .far.fa-star {
+  color: #ddd; /* Empty star color */
+}
+
+.product-rating .fas.fa-star-half-alt {
+  color: #f39c12; /* Half star color */
+}
+
+.rating-number {
+  color: #777;
+  font-size: 13px;
+  margin-left: 5px;
+  font-weight: 500;
+}
+
+/* Adjust product card layout for rating */
+.product-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card h3 {
+  margin-bottom: 8px; /* Reduced to make space for rating */
+}
+
+.product-card p {
+  margin-top: 10px; /* Adjusted to work with rating */
+}
+
+/* Animation for rating stars */
+@keyframes starPulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.product-card:hover .product-rating i {
+  animation: starPulse 1s ease infinite;
+  animation-delay: calc(var(--star-index) * 0.1s);
+}
+
+.product-rating i:nth-child(1) {
+  --star-index: 1;
+}
+.product-rating i:nth-child(2) {
+  --star-index: 2;
+}
+.product-rating i:nth-child(3) {
+  --star-index: 3;
+}
+.product-rating i:nth-child(4) {
+  --star-index: 4;
+}
+.product-rating i:nth-child(5) {
+  --star-index: 5;
+}

@@ -8,17 +8,8 @@
       "Phone": "01069423530",
       "Address": "No Address",
       "Type": "Admin",
-      "id": "fdee"
-    },
-    {
-      "Email": "mariem@gmail.com",
-      "Password": "12345678",
-      "id": "70bd5f9b-81fb-4356-8303-d8091d7c40fc",
-      "FullName": "Mariem",
-      "UserName": "Mariem",
-      "Phone": "01069423530",
-      "Address": "9 - sayed zaidan st",
-      "Type": "Seller"
+      "id": "fdee",
+      "Date": "Thu May 08 2025"
     },
     {
       "id": "b7c4d147-679f-4145-a4f9-365a2c28c341",
@@ -28,17 +19,19 @@
       "Password": "12345678",
       "Phone": "01069423530",
       "Address": "9 - sayed zaidan st",
-      "Type": "Customer"
+      "Type": "Customer",
+      "Date": "Thu May 08 2025"
     },
     {
-      "id": "b8328daf-4314-43d2-9f04-0b5040e2d08c",
-      "FullName": "Ahmed ElKholy",
-      "UserName": "a.ElkHOLY",
-      "Email": "midoarz2000@gmail.com",
-      "Password": "12345678",
+      "id": "5e9f923b-c97d-44ce-814e-7ffe32b5bd02",
+      "FullName": "AhmedAde",
+      "UserName": "a.elkholy2711@gmail.com",
+      "Email": "mariem414@gmail.com",
+      "Password": "AD_214 fdsfg",
       "Phone": "01069423530",
       "Address": "9 - sayed zaidan st",
-      "Type": "Customer"
+      "Type": "Customer",
+      "Date": "Thu May 08 2025"
     }
   ],
   "Products": [
@@ -51,7 +44,8 @@
       "isPending": false,
       "SellerId": "70bd5f9b-81fb-4356-8303-d8091d7c40fc",
       "Category": "Accessories",
-      "quantity": 45
+      "quantity": 42,
+      "Rating": 3.53
     },
     {
       "id": "ec7772e1-2482-4376-8d65-3bb46e6aa6f3",
@@ -62,7 +56,8 @@
       "isPending": false,
       "SellerId": "70bd5f9b-81fb-4356-8303-d8091d7c40fc",
       "Category": "Electronics",
-      "quantity": 89
+      "quantity": 88,
+      "Rating": 4
     },
     {
       "id": "2907881e-0875-440d-bf86-5f1ae9374c16",
@@ -73,7 +68,8 @@
       "isPending": false,
       "SellerId": "70bd5f9b-81fb-4356-8303-d8091d7c40fc",
       "Category": "Accessories",
-      "quantity": 92
+      "quantity": 92,
+      "Rating": 2
     },
     {
       "id": "2907881e-0875-440d-b2a4-5f1ae9374c16",
@@ -84,36 +80,25 @@
       "isPending": false,
       "SellerId": "70bd5f9b-81fb-4356-8303-d8091d7c40fc",
       "Category": "Electronics",
-      "quantity": 95
+      "quantity": 95,
+      "Rating": 1
     }
   ],
   "Cart": [
     {
-      "id": "b319596e-fb5b-4cbe-9a8d-0ea20fc2127c",
+      "id": "7f255904-b327-4b9b-9810-822feec87f3a",
       "customerId": "b7c4d147-679f-4145-a4f9-365a2c28c341",
       "orders": [
         {
-          "id": "6f8ade11-d30d-4588-8a93-2929f52df574",
+          "id": "55ce5bf5-de05-42e9-b1d6-877ad7d1d227",
           "productId": "28d274f1-1b65-4c1c-84df-70f8fba385b4",
-          "quantity": 1,
-          "status": "Drafted"
-        },
-        {
-          "id": "3f5f16b0-ae82-47aa-9100-9d0e7af7ec0d",
-          "productId": "2907881e-0875-440d-bf86-5f1ae9374c16",
           "quantity": 2,
           "status": "Drafted"
         },
         {
-          "id": "71f55b92-e5c9-48ec-bcb7-4a42e201be05",
-          "productId": "2907881e-0875-440d-b2a4-5f1ae9374c16",
-          "quantity": 2,
-          "status": "Drafted"
-        },
-        {
-          "id": "875ae1a2-fd91-4ce7-a890-578144334ddf",
+          "id": "00d32c23-d1fe-478c-ada9-3c9885bc0e97",
           "productId": "ec7772e1-2482-4376-8d65-3bb46e6aa6f3",
-          "quantity": 2,
+          "quantity": 3,
           "status": "Drafted"
         }
       ]

@@ -138,6 +138,41 @@ document.addEventListener("DOMContentLoaded", function () {
       });
   }
 
+  // Create star rating HTML based on rating value
+  function createRatingStars(rating) {
+    if (!rating && rating !== 0) rating = 0;
+
+    // Ensure rating is between 0 and 5
+    rating = Math.max(0, Math.min(5, parseFloat(rating)));
+
+    const fullStars = Math.floor(rating);
+    const halfStar = rating % 1 >= 0.5;
+    const emptyStars = 5 - fullStars - (halfStar ? 1 : 0);
+
+    let starsHTML = '<div class="product-rating">';
+
+    // Add full stars
+    for (let i = 0; i < fullStars; i++) {
+      starsHTML += '<i class="fas fa-star"></i>';
+    }
+
+    // Add half star if needed
+    if (halfStar) {
+      starsHTML += '<i class="fas fa-star-half-alt"></i>';
+    }
+
+    // Add empty stars
+    for (let i = 0; i < emptyStars; i++) {
+      starsHTML += '<i class="far fa-star"></i>';
+    }
+
+    // Add rating number
+    starsHTML += `<span class="rating-number">(${rating.toFixed(1)})</span>`;
+    starsHTML += "</div>";
+
+    return starsHTML;
+  }
+
   function renderProducts(products) {
     if (!container) {
       console.error("Container not found!");
@@ -168,7 +203,15 @@ document.addEventListener("DOMContentLoaded", function () {
       const title = document.createElement("h3");
       title.textContent = item.name;
 
+      // Create rating element
+      const ratingDiv = document.createElement("div");
+      ratingDiv.className = "rating-container";
+      // Use item.rating if it exists, otherwise rating between 3.5 and 5
+      const rating = item.Rating;
+      ratingDiv.innerHTML = createRatingStars(rating);
+
       const price = document.createElement("p");
+      price.className = "product-price";
       price.textContent = `$${parseFloat(item.price).toFixed(2)}`;
 
       const button = document.createElement("button");
@@ -177,6 +220,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       card.appendChild(img);
       card.appendChild(title);
+      card.appendChild(ratingDiv); // Add the rating section
       card.appendChild(price);
       card.appendChild(button);
 
@@ -196,7 +240,7 @@ document.addEventListener("DOMContentLoaded", function () {
     for (let i = 1; i <= totalPages; i++) {
       const pageBtn = document.createElement("button");
       pageBtn.textContent = i;
-      pageBtn.classList.add("pagination-button");
+      pageBtn.classList.add("page-number");
       if (i === currentPage) pageBtn.classList.add("active");
 
       pageBtn.addEventListener("click", () => {
