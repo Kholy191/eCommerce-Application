@@ -1,0 +1,89 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #e3f2fd;
+  color: #0d47a1;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.edit-container {
+  background-color: #fff;
+  border: 2px solid #90caf9;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(21, 101, 192, 0.15);
+  padding: 40px;
+  width: 400px;
+}
+
+.edit-container h2 {
+  margin-bottom: 24px;
+  color: #1565c0;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 6px;
+  color: #1565c0;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #bbdefb;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* Buttons container */
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 24px;
+}
+
+.cancel-btn,
+.confirm-btn {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cancel-btn {
+  background-color: #cfd8dc;
+  color: #37474f;
+  margin-right: 12px;
+}
+
+.cancel-btn:hover {
+  background-color: #b0bec5;
+}
+
+.confirm-btn {
+  background-color: #1e88e5;
+  color: white;
+}
+
+.confirm-btn:hover {
+  background-color: #1565c0;
+}

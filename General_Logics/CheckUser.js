@@ -26,7 +26,7 @@ window.addEventListener("load", () => {
       if (!currentPath.includes("/Seller/Seller.html")) {
         window.location.href = "/Seller/Seller.html";
       }
-    }else if (user.Type === "Customer") {
+    } else if (user.Type === "Customer") {
       if (!currentPath.includes("/Customer/Customer.html")) {
         window.location.href = "/Customer/Customer.html";
       }
