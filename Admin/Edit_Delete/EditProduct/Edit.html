@@ -12,18 +12,25 @@
       <div class="form-group">
         <label for="productName">Name</label>
         <input type="text" id="productName" />
+        <span id="nameError" class="error-message"></span>
       </div>
+
       <div class="form-group">
         <label for="productPrice">Price (EGP)</label>
         <input type="number" id="productPrice" />
+        <span id="priceError" class="error-message"></span>
       </div>
+
       <div class="form-group">
         <label for="productDescription">Description</label>
         <textarea id="productDescription"></textarea>
+        <span id="descriptionError" class="error-message"></span>
       </div>
+
       <div class="form-group">
         <label for="productImage">Image URL</label>
         <input type="text" id="productImage" />
+        <span id="imageError" class="error-message"></span>
       </div>
       <div class="button-group">
         <button class="cancel-btn" onclick="window.history.back()">
@@ -33,7 +40,8 @@
       </div>
     </div>
 
-    <script src="./Edit.js"></script>
+    <script src="../../../Seller/ViewProducts/EditView/Edit.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="../../Admin.js"></script>
   </body>
 </html>

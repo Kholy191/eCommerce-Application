@@ -53,24 +53,12 @@
       "Address": "9 - sayed zaidan st",
       "Type": "Customer",
       "Date": "Sat May 10 2025"
-    },
-    {
-      "id": "3e28b5b4-75c1-4ee0-ae66-33f69065d410",
-      "FullName": "Yomna",
-      "UserName": "egfwnp",
-      "Email": "Yomna@gmail.com",
-      "Password": "mr_ahmed131241Sa",
-      "Phone": "01069423530",
-      "Address": "9 - sayed zaidan st",
-      "Type": "Seller",
-      "Date": "Sat May 10 2025"
     }
   ],
   "Products": [
     {
-      "id": "28d274f1-1b65-4c1c-84df-70f8fba385b4",
       "image": "https://burst.shopifycdn.com/photos/wrist-watches.jpg?width=1000&format=pjpg&exif=0&iptc=0",
-      "name": "Watches",
+      "name": "Watch",
       "price": "25200",
       "description": "This is Watch",
       "isPending": false,
@@ -78,14 +66,7 @@
       "Category": "Accessories",
       "quantity": 37,
       "Rating": 0,
-      "ratings": [
-        {
-          "customerId": "b7c4d147-679f-4145-a4f9-365a2c28c341",
-          "rating": 4,
-          "date": "2025-05-09T22:55:10.805Z"
-        }
-      ],
-      "averageRating": 4
+      "id": "28d274f1-1b65-4c1c-84df-70f8fba385b4"
     },
     {
       "id": "ec7772e1-2482-4376-8d65-3bb46e6aa6f3",
@@ -120,11 +101,11 @@
       "Rating": 0
     },
     {
-      "id": "c65349b3-58d9-48f0-96cb-fb022c42845b",
+      "id": "08d11e55-e4d8-40fd-9271-4a53894fb0de",
       "image": "https://burst.shopifycdn.com/photos/wrist-watches.jpg?width=1000&format=pjpg&exif=0&iptc=0",
-      "name": "Headphone",
-      "price": 715,
-      "description": "dafafaf afr qwfr qwfr qwafr",
+      "name": "Gel",
+      "price": 2515,
+      "description": "far qwr qwr qwf war qw",
       "Category": "Beauty",
       "isPending": false,
       "SellerId": "70bd5f9b-81fb-4356-8303-d8091d7c40fc"
@@ -158,12 +139,6 @@
           "productId": "ec7772e1-2482-4376-8d65-3bb46e6aa6f3",
           "quantity": 1,
           "status": "shipped"
-        },
-        {
-          "id": "5f93a78f-5ca1-4f36-8bfb-a80f15b7d96c",
-          "productId": "28d274f1-1b65-4c1c-84df-70f8fba385b4",
-          "quantity": 1,
-          "status": "in cart"
         }
       ]
     }
