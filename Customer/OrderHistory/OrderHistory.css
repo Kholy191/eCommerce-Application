@@ -333,32 +333,6 @@ body {
   color: #0ea5e9;
 }
 
-/* Rating Stars */
-.rating-container {
-  margin-top: 1rem;
-}
-
-.rating-title {
-  font-size: 0.9rem;
-  color: #64748b;
-  margin-bottom: 0.5rem;
-}
-
-.star-rating {
-  display: flex;
-  gap: 0.3rem;
-}
-
-.star-rating i {
-  color: #e2e8f0;
-  cursor: pointer;
-  transition: color 0.2s;
-}
-
-.star-rating i.filled {
-  color: #f59e0b;
-}
-
 /* Empty State */
 .no-orders {
   text-align: center;
@@ -490,68 +464,7 @@ body {
     margin-bottom: 1rem;
   }
 }
-.orders-section-title {
-  color: #2c3e50;
-  border-bottom: 2px solid #3498db;
-  padding-bottom: 10px;
-  margin-top: 30px;
-  margin-bottom: 20px;
-}
 
-.orders-container {
-  margin-bottom: 40px;
-}
-
-.order-item {
-  display: flex;
-  align-items: center;
-  padding: 15px;
-  margin-bottom: 15px;
-  background-color: #fff;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.order-item-img {
-  width: 80px;
-  height: 80px;
-  object-fit: cover;
-  border-radius: 4px;
-  margin-right: 20px;
-}
-
-.order-item-details {
-  flex: 1;
-}
-
-.order-item-name {
-  font-weight: bold;
-  margin-bottom: 5px;
-  color: #2c3e50;
-}
-
-.order-item-price, 
-.order-item-quantity, 
-.order-item-status, 
-.order-item-total {
-  margin-bottom: 3px;
-  color: #7f8c8d;
-}
-
-.order-total {
-  text-align: right;
-  margin-top: 15px;
-  font-size: 1.1rem;
-  color: #2c3e50;
-  font-weight: bold;
-}
-
-.no-orders {
-  text-align: center;
-  padding: 40px;
-  color: #7f8c8d;
-  font-size: 1.1rem;
-}
 @media (max-width: 480px) {
   .navbar {
     flex-direction: column;
