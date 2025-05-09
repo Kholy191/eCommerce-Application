@@ -782,23 +782,68 @@
   }
 }
 
-.product-card:hover .product-rating i {
-  animation: starPulse 1s ease infinite;
-  animation-delay: calc(var(--star-index) * 0.1s);
+
+@keyframes starPulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
-.product-rating i:nth-child(1) {
-  --star-index: 1;
+
+.product-card:hover .product-rating i {
+  animation-name: starPulse;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
 }
-.product-rating i:nth-child(2) {
-  --star-index: 2;
+
+
+.product-card:hover .product-rating i:nth-child(1) {
+  animation-delay: 0.1s;
 }
-.product-rating i:nth-child(3) {
-  --star-index: 3;
+
+.product-card:hover .product-rating i:nth-child(2) {
+  animation-delay: 0.2s;
 }
-.product-rating i:nth-child(4) {
-  --star-index: 4;
+
+.product-card:hover .product-rating i:nth-child(3) {
+  animation-delay: 0.3s;
 }
-.product-rating i:nth-child(5) {
-  --star-index: 5;
+
+.product-card:hover .product-rating i:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.product-card:hover .product-rating i:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
+
+.product-rating {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  margin: 8px 0;
+}
+
+.product-rating i {
+  color: #f39c12;
+  font-size: 16px;
+  transition: transform 0.2s ease;
+}
+
+.product-rating .far.fa-star {
+  color: #ddd;
+}
+
+.product-rating .fas.fa-star-half-alt {
+  color: #f39c12;
 }

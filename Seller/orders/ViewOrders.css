@@ -1,129 +1,425 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f5f7fa;
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8fafc;
+  color: #334155;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  line-height: 1.6;
 }
 
 .container {
-    width: 90%;
-    max-width: 1200px;
-    padding: 30px 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  width: 90%;
+  max-width: 1200px;
+  padding: 40px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
+/* Header Styling */
 h1 {
-    text-align: center;
-    color: #2c3e50;
-    margin-bottom: 30px;
-    font-size: 2.2rem;
-    width: 100%;
+  text-align: center;
+  color: #0ea5e9;
+  margin-bottom: 35px;
+  font-size: 2.2rem;
+  width: 100%;
+  font-weight: 700;
+  position: relative;
+  padding-bottom: 15px;
 }
 
+h1::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #0ea5e9, #0284c7);
+  border-radius: 2px;
+}
+
+/* Orders Grid Layout */
 .orders-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    gap: 25px;
-    justify-items: center;
-    width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 30px;
+  justify-items: center;
+  width: 100%;
 }
 
+/* Order Card Styling */
 .order-card {
-    background: white;
-    border-radius: 10px;
-    padding: 20px;
-    width: 100%;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: white;
+  border-radius: 16px;
+  padding: 25px;
+  width: 100%;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.03), 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  border-top: 4px solid #0ea5e9;
+  position: relative;
+  overflow: hidden;
 }
 
-.no-orders-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 200px;
-    grid-column: 1 / -1;
-}
-
-.no-orders {
-    text-align: center;
-    padding: 40px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    color: #7f8c8d;
-    font-size: 1.1rem;
-    max-width: 500px;
-    width: 100%;
-}
-
-/* Rest of your existing CSS remains the same */
 .order-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05), 0 5px 15px rgba(0, 0, 0, 0.07);
 }
 
+.order-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0) 40%,
+    rgba(255, 255, 255, 0.8) 50%,
+    rgba(255, 255, 255, 0) 60%
+  );
+  z-index: 1;
+  transform: translateX(-100%);
+  transition: all 0.6s ease;
+}
+
+.order-card:hover::before {
+  transform: translateX(100%);
+}
+
+/* Product Info Styling */
 .product-info {
-    display: flex;
-    align-items: center;
-    margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e2e8f0;
 }
 
 .product-image {
-    width: 80px;
-    height: 80px;
-    border-radius: 8px;
-    margin-right: 20px;
-    object-fit: cover;
-    border: 1px solid #eee;
+  width: 100px;
+  height: 100px;
+  border-radius: 12px;
+  margin-right: 20px;
+  object-fit: cover;
+  border: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.order-card:hover .product-image {
+  transform: scale(1.05);
 }
 
 .product-details {
-    flex: 1;
+  flex: 1;
 }
 
 .product-name {
-    font-weight: 600;
-    color: #2c3e50;
-    margin-bottom: 5px;
-    font-size: 1.1rem;
+  font-weight: 700;
+  color: #334155;
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+  line-height: 1.4;
 }
 
-.product-quantity, .customer-name {
-    color: #7f8c8d;
-    font-size: 0.9rem;
-    margin-bottom: 3px;
+.product-quantity {
+  color: #64748b;
+  font-size: 0.95rem;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
 }
 
+.product-quantity::before {
+  content: "×";
+  margin-right: 5px;
+  color: #94a3b8;
+}
+
+.product-price {
+  color: #0ea5e9;
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-top: 5px;
+  display: inline-block;
+  padding: 3px 10px;
+  background-color: rgba(14, 165, 233, 0.1);
+  border-radius: 20px;
+}
+
+/* Customer Info Styling */
+.customer-info {
+  margin-bottom: 15px;
+}
+
+.customer-name {
+  color: #334155;
+  font-size: 1rem;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.customer-address {
+  color: #64748b;
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+  line-height: 1.5;
+}
+
+.customer-phone {
+  color: #64748b;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.customer-phone::before {
+  content: "📞";
+  margin-right: 8px;
+}
+
+/* Order Status Badge */
+.order-status {
+  display: inline-block;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-top: 10px;
+  background-color: rgba(14, 165, 233, 0.1);
+  color: #0ea5e9;
+}
+
+/* Button Styling */
 .btn-ship {
-    background: #27ae60;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: 500;
-    width: 100%;
-    margin-top: 15px;
-    transition: background-color 0.3s ease;
+  background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
+  color: white;
+  border: none;
+  padding: 12px 15px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 600;
+  width: 100%;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(14, 165, 233, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-ship::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0) 40%,
+    rgba(255, 255, 255, 0.3) 50%,
+    rgba(255, 255, 255, 0) 60%
+  );
+  z-index: 1;
+  transform: translateX(-100%);
+  transition: all 0.6s ease;
+}
+
+.btn-ship:hover::before {
+  transform: translateX(100%);
 }
 
 .btn-ship:hover {
-    background: #219955;
+  background: linear-gradient(135deg, #0284c7 0%, #075985 100%);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(14, 165, 233, 0.4);
+}
+
+.btn-ship:active {
+  transform: translateY(-1px);
+  box-shadow: 0 3px 8px rgba(14, 165, 233, 0.4);
+}
+
+/* Empty State Styling */
+.no-orders-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 300px;
+  grid-column: 1 / -1;
 }
 
 .no-orders {
-    text-align: center;
-    padding: 40px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    color: #7f8c8d;
+  text-align: center;
+  padding: 50px 40px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.03), 0 4px 10px rgba(0, 0, 0, 0.05);
+  color: #64748b;
+  font-size: 1.1rem;
+  max-width: 500px;
+  width: 100%;
+  position: relative;
+  border-top: 4px solid #0ea5e9;
+}
+
+.no-orders h3 {
+  color: #0ea5e9;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+}
+
+.no-orders p {
+  margin-bottom: 20px;
+}
+
+/* Animation for cards */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.order-card {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.order-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.order-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.order-card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.order-card:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.order-card:nth-child(5) {
+  animation-delay: 0.5s;
+}
+.order-card:nth-child(6) {
+  animation-delay: 0.6s;
+}
+
+/* Order Date */
+.order-date {
+  color: #94a3b8;
+  font-size: 0.85rem;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.order-date::before {
+  content: "🕒";
+  margin-right: 8px;
+}
+
+/* Order Actions */
+.order-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.btn-view {
+  background: white;
+  color: #64748b;
+  border: 1px solid #e2e8f0;
+  padding: 10px 15px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 600;
+  flex: 1;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.btn-view:hover {
+  background: #f8fafc;
+  color: #334155;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .orders-grid {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+    padding: 30px 0;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+  }
+
+  .orders-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+  }
+
+  .order-card {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    width: 92%;
+    padding: 20px 0;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  .orders-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .product-image {
+    width: 100%;
+    height: 180px;
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+
+  .no-orders {
+    padding: 30px 20px;
+  }
 }

@@ -20,7 +20,6 @@ registerButton.addEventListener("click", function () {
 });
 
 window.addEventListener("load", () => {
-  // نستنّى شوية لحد ما الكروت تتعرض
   setTimeout(() => {
     const addToCartBtns = document.querySelectorAll(".add-to-cart-btn");
 
