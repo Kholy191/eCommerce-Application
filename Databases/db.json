@@ -23,6 +23,17 @@
       "Date": "Thu May 08 2025"
     },
     {
+      "id": "70bd5f9b-81fb-4356-8303-d8091d7c40fc",
+      "FullName": "Mariem",
+      "UserName": "Seller1",
+      "Email": "mariem@gmail.com",
+      "Password": "12345678",
+      "Phone": "01069423530",
+      "Address": "9 - sayed zaidan st",
+      "Type": "Seller",
+      "Date": "Thu May 08 2025"
+    },
+    {
       "id": "5e9f923b-c97d-44ce-814e-7ffe32b5bd02",
       "FullName": "AhmedAde",
       "UserName": "a.elkholy2711@gmail.com",
@@ -44,8 +55,8 @@
       "isPending": false,
       "SellerId": "70bd5f9b-81fb-4356-8303-d8091d7c40fc",
       "Category": "Accessories",
-      "quantity": 42,
-      "Rating": 3.53
+      "quantity": 40,
+      "Rating": 0
     },
     {
       "id": "ec7772e1-2482-4376-8d65-3bb46e6aa6f3",
@@ -56,8 +67,8 @@
       "isPending": false,
       "SellerId": "70bd5f9b-81fb-4356-8303-d8091d7c40fc",
       "Category": "Electronics",
-      "quantity": 88,
-      "Rating": 4
+      "quantity": 86,
+      "Rating": 0
     },
     {
       "id": "2907881e-0875-440d-bf86-5f1ae9374c16",
@@ -68,8 +79,8 @@
       "isPending": false,
       "SellerId": "70bd5f9b-81fb-4356-8303-d8091d7c40fc",
       "Category": "Accessories",
-      "quantity": 92,
-      "Rating": 2
+      "quantity": 91,
+      "Rating": 0
     },
     {
       "id": "2907881e-0875-440d-b2a4-5f1ae9374c16",
@@ -81,25 +92,47 @@
       "SellerId": "70bd5f9b-81fb-4356-8303-d8091d7c40fc",
       "Category": "Electronics",
       "quantity": 95,
-      "Rating": 1
+      "Rating": 0
+    },
+    {
+      "id": "2c581b9b-5c07-4d2d-b5d0-06c8aba29dbb",
+      "image": "https://burst.shopifycdn.com/photos/wrist-watches.jpg?width=1000&format=pjpg&exif=0&iptc=0",
+      "name": "Headphone",
+      "price": 2313,
+      "description": "DosE SEDE QFMOFMN",
+      "Category": "Beauty",
+      "isPending": true,
+      "SellerId": "70bd5f9b-81fb-4356-8303-d8091d7c40fc"
     }
   ],
   "Cart": [
     {
-      "id": "7f255904-b327-4b9b-9810-822feec87f3a",
+      "id": "c9ac3d9d-bc9f-4fec-85c0-a9db7125a582",
       "customerId": "b7c4d147-679f-4145-a4f9-365a2c28c341",
       "orders": [
         {
-          "id": "55ce5bf5-de05-42e9-b1d6-877ad7d1d227",
+          "id": "a2e5d350-0f5e-4d38-bd1d-482de4078798",
           "productId": "28d274f1-1b65-4c1c-84df-70f8fba385b4",
           "quantity": 2,
           "status": "Drafted"
         },
         {
-          "id": "00d32c23-d1fe-478c-ada9-3c9885bc0e97",
+          "id": "20c392dc-8bf2-4665-9b20-15f24b0a2fd0",
           "productId": "ec7772e1-2482-4376-8d65-3bb46e6aa6f3",
-          "quantity": 3,
+          "quantity": 2,
+          "status": "shipped"
+        },
+        {
+          "id": "0b5f69e9-2358-4415-9610-ef9dfda40d32",
+          "productId": "2907881e-0875-440d-bf86-5f1ae9374c16",
+          "quantity": 1,
           "status": "Drafted"
+        },
+        {
+          "id": "e3aa3091-165b-4d2a-8f09-f967107da5de",
+          "productId": "28d274f1-1b65-4c1c-84df-70f8fba385b4",
+          "quantity": 1,
+          "status": "in cart"
         }
       ]
     }
