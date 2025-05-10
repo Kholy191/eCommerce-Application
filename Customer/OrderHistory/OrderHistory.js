@@ -201,21 +201,21 @@ async function handleStarClick(event) {
 
 async function updateProductRating(productId, newRating, customerId) {
   try {
-    // First, get the current product data
+
     const response = await fetch(`http://localhost:5000/Products/${productId}`);
     const product = await response.json();
     
-    // Initialize ratings array if it doesn't exist
+
     const currentRatings = product.ratings || [];
     
-    // Check if customer already rated this product (shouldn't happen due to UI, but just in case)
+   
     const existingRatingIndex = currentRatings.findIndex(r => r.customerId === customerId);
     
     if (existingRatingIndex >= 0) {
-      // Customer already rated - update existing rating
+   
       currentRatings[existingRatingIndex].rating = newRating;
     } else {
-      // Add new rating
+  
       currentRatings.push({
         customerId: customerId,
         rating: newRating,
@@ -223,10 +223,10 @@ async function updateProductRating(productId, newRating, customerId) {
       });
     }
     
-    // Calculate new average rating
+   
     const avgRating = calculateAverageRating(currentRatings.map(r => r.rating));
     
-    // Update the product with new rating data
+   
     const updateResponse = await fetch(`http://localhost:5000/Products/${productId}`, {
       method: 'PATCH',
       headers: {

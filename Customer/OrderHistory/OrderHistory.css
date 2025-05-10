@@ -1,4 +1,4 @@
-/* General Styles */
+
 * {
   margin: 0;
   padding: 0;
@@ -12,7 +12,7 @@ body {
   line-height: 1.6;
 }
 
-/* Navbar Styles */
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -104,7 +104,7 @@ body {
   transform: translateY(-2px);
 }
 
-/* Order History Container */
+
 .order-history-container {
   max-width: 1200px;
   margin: 2.5rem auto;
@@ -133,13 +133,13 @@ body {
   border-radius: 2px;
 }
 
-/* Order List */
+
 .order-list {
   display: grid;
   gap: 2rem;
 }
 
-/* Order Card */
+
 .order-card {
   background-color: white;
   border-radius: 16px;
@@ -178,7 +178,7 @@ body {
   transform: translateX(100%);
 }
 
-/* Status Tracking Bar */
+
 .status-tracker {
   margin: 2rem 0;
   padding: 1.5rem 0;
@@ -249,7 +249,7 @@ body {
   font-weight: 600;
 }
 
-/* Order Items */
+
 .order-items {
   display: grid;
   gap: 1.5rem;
@@ -333,7 +333,7 @@ body {
   color: #0ea5e9;
 }
 
-/* Rating Stars */
+
 .rating-container {
   margin-top: 1rem;
 }
@@ -359,7 +359,7 @@ body {
   color: #f59e0b;
 }
 
-/* Empty State */
+
 .no-orders {
   text-align: center;
   padding: 4rem 2rem;
@@ -421,7 +421,6 @@ body {
   box-shadow: 0 6px 15px rgba(14, 165, 233, 0.4);
 }
 
-/* Animation for cards */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -453,7 +452,7 @@ body {
   animation-delay: 0.5s;
 }
 
-/* Responsive */
+
 @media (max-width: 768px) {
   .navbar {
     padding: 1rem;

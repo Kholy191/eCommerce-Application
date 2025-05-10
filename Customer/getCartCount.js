@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Function to update cart count (only counts "in cart" items)
+   
     function updateCartCount() {
       const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
       const cartCountElement = document.getElementById('cartCount');
@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
         return;
       }
   
-      // Fetch cart data
+
       fetch('http://localhost:5000/Cart')
         .then(response => response.json())
         .then(cartData => {
@@ -17,9 +17,9 @@ document.addEventListener('DOMContentLoaded', function() {
           const userCart = cartData.find(cart => cart.customerId === loggedInUser.id);
           
           if (userCart && userCart.orders) {
-            // Calculate total quantity of only "in cart" items
+           
             const totalItems = userCart.orders.reduce((total, order) => {
-              // Only count if status is "in cart"
+            
               return order.status === "in cart" ? total + order.quantity : total;
             }, 0);
             
@@ -34,10 +34,10 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
   
-    // Initial update
+ 
     updateCartCount();
   
-    // Update when cart changes
+   
     document.addEventListener('itemAddedToCart', updateCartCount);
-    document.addEventListener('cartUpdated', updateCartCount); // Add this for other cart updates
+    document.addEventListener('cartUpdated', updateCartCount); 
 });

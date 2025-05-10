@@ -6,20 +6,20 @@ document.addEventListener("DOMContentLoaded", function () {
   const totalElement = document.getElementById("total");
   const checkoutBtn = document.getElementById("checkoutBtn");
 
-  // Get logged in user
+
   const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
 
-  // Initialize cart
+
   fetchCartData();
 
-  // Update welcome message
+  
   if (loggedInUser && customerNameElement) {
     customerNameElement.textContent = `Welcome, ${
       loggedInUser.UserName || "Customer"
     }`;
   }
 
-  // Fetch cart data with only "in cart" items
+
   async function fetchCartData() {
     try {
       if (!loggedInUser) {
@@ -188,7 +188,7 @@ document.addEventListener("DOMContentLoaded", function () {
     checkoutBtn.disabled = true;
   }
 
-  // ✅ Proceed to checkout - update status to "Drafted" and decrease product quantities
+ 
   checkoutBtn.addEventListener("click", async function () {
     try {
       if (!loggedInUser) {
@@ -225,7 +225,7 @@ document.addEventListener("DOMContentLoaded", function () {
         return item;
       });
 
-      // Update cart status to Drafted
+     
       const updateResponse = await fetch(
         `http://localhost:5000/Cart/${userCart.id}`,
         {
@@ -242,11 +242,10 @@ document.addEventListener("DOMContentLoaded", function () {
         throw new Error("Failed to update cart status");
       }
 
-      // Fetch all products
       const productsResponse = await fetch("http://localhost:5000/Products");
       const allProducts = await productsResponse.json();
 
-      // Update product quantities
+      
       for (const item of inCartItems) {
         const product = allProducts.find((p) => p.id === item.productId);
         if (product) {

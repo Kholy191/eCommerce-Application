@@ -1,9 +1,9 @@
 
 
-// Product Search and Filter Functionality
+// Product Search 
 document.addEventListener("DOMContentLoaded", function() {
     const container = document.getElementById("Products");
-    // Target the search input by its placeholder instead of ID
+   
     const searchInput = document.querySelector('input[placeholder="Search products..."]');
   
     if (!container || !searchInput) {
@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function() {
   
     let productsArray = [];
   
-    // Fetch and display all products initially
+   
     function fetchAndDisplayProducts() {
       fetch("http://localhost:5000/Products?isPending=false")
         .then((res) => res.json())
@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
   
-    // Render products to the DOM
+
     function renderProducts(products) {
       container.innerHTML = "";
   
@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", function() {
       });
     }
   
-    // Filter products based on search input
+   
     function filterProducts() {
       const searchTerm = searchInput.value.toLowerCase().trim();
       console.log("Filtering products with search term:", searchTerm);
@@ -89,16 +89,15 @@ document.addEventListener("DOMContentLoaded", function() {
       console.log(`Found ${filteredProducts.length} products matching "${searchTerm}"`);
       renderProducts(filteredProducts);
     }
-  
-    // Add event listener for search input with debounce for better performance
+ 
     let debounceTimer;
     searchInput.addEventListener("input", function() {
       console.log("Search input changed:", this.value);
       clearTimeout(debounceTimer);
-      debounceTimer = setTimeout(filterProducts, 300); // 300ms debounce
+      debounceTimer = setTimeout(filterProducts, 300); 
     });
     
-    // Also handle form submission
+
     const searchForm = searchInput.closest('form');
     if (searchForm) {
       searchForm.addEventListener('submit', function(e) {
@@ -107,7 +106,7 @@ document.addEventListener("DOMContentLoaded", function() {
       });
     }
   
-    // Initialize
+ 
     fetchAndDisplayProducts();
     console.log("Search functionality initialized");
 });

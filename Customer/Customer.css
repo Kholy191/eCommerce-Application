@@ -1,4 +1,4 @@
-/* Search and Filters Container */
+
 #searchAndFilters {
   display: flex;
   flex-direction: row;
@@ -12,14 +12,14 @@
   flex-wrap: wrap;
 }
 
-/* Search Bar Container */
+
 .search-bar {
   display: flex;
   flex: 1;
   min-width: 300px;
 }
 
-/* Search Input Styling */
+
 #searchInput {
   flex: 1;
   padding: 12px 20px;
@@ -28,8 +28,8 @@
   font-size: 1rem;
   outline: none;
   transition: all 0.3s ease;
-  color: #495057; /* Ensures text is visible */
-  background-color: white; /* Ensures input background isn't transparent */
+  color: #495057; 
+  background-color: white;
 }
 
 #searchInput:focus {
@@ -37,7 +37,7 @@
   box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
 }
 
-/* Search Type Toggle */
+
 .search-container {
   display: flex;
   align-items: center;
@@ -59,7 +59,7 @@
   padding: 5px 0;
 }
 
-/* Price Filter Container */
+
 .price-filter {
   display: flex;
   align-items: center;
@@ -119,7 +119,7 @@
   background-color: #c0392b;
 }
 
-/* Responsive Adjustments */
+
 @media (max-width: 768px) {
   #searchAndFilters {
     flex-direction: column;
@@ -133,7 +133,7 @@
   }
 }
 
-/* Popup Styles */
+
 .popup {
   display: none;
   position: fixed;
@@ -222,7 +222,7 @@
   padding-left: 20px;
 }
 
-/* Arrow indicator */
+
 .profile-button::after {
   content: "▼";
   font-size: 10px;
@@ -293,7 +293,7 @@
 
 .cart-icon {
   font-size: 1.5rem;
-  color: #333; /* Set your preferred color */
+  color: #333;
   vertical-align: middle;
 }
 
@@ -313,7 +313,7 @@
   line-height: 1;
 }
 
-/* Profile Menu Styles */
+
 .profile-menu {
   position: relative;
   display: inline-block;
@@ -359,7 +359,7 @@
   padding-left: 20px;
 }
 
-/* Active state */
+
 .profile-menu.active .profile-dropdown {
   display: block;
   animation: fadeIn 0.3s ease-out;
